@@ -75,13 +75,10 @@ Example:
 */
 
 :root {
-    --mediaSM: 576px; /* min-width for sm breakpoint */
-    --mediaMD: 768px; /* min-width for md breakpoint */
-    --mediaLG: 992px; /* min-width for lg breakpoint */
     --sm: 540px; /* max-width for small breakpoint container */
     --md: 720px; /* max-width for medium breakpoint container */
     --lg: 960px; /* max-width for large breakpoint container */
-    --padding-grid: 8px; /* ensures equal spacing for column content  */
+    --padding-grid: 16px; /* ensures equal spacing for column content  */
     --numberOf-column: 12; /* number of columns in a row */
 }
 
@@ -169,7 +166,7 @@ footer {
 }
 
 /* Small breakpoint */
-@media (min-width: var(--mediaSM)) { 
+@media (min-width: 576px) { 
     .container {
         max-width: var(--sm);
     }
@@ -187,7 +184,7 @@ footer {
     }
     
     .col-sm-4 {
-        flex-basis: calc((100% / var(--numberOf-column)) * 4);
+        flex-basis: calc((100% / var(--numberOf-column)) * 4) ;
     }
     
     .col-sm-5 {
@@ -224,7 +221,7 @@ footer {
 }
 
 /* Medium breakpoint */
-@media (min-width: var(--mediaMD)) { 
+@media (min-width: 768px) { 
     .container {
         max-width: var(--md);
     }
@@ -279,7 +276,7 @@ footer {
 }
 
 /* Large breakpoint */
-@media (min-width: var(--mediaLG)) { 
+@media (min-width: 992px) { 
     .container {
         max-width: var(--lg);
     }
