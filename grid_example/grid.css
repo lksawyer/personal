@@ -1,0 +1,331 @@
+/* 
+
+Classes
+=======
+
+.container:
+- used to contain all elements on a page that aren't header and footer
+- sets a max-width at each responsive breakpoint
+- this should be applied to the main HTML element
+
+.row
+- used to wrap columns
+- is a flex parent
+
+.wrapper
+- used to wrap column content
+- is a flex parent
+- adds padding to column content
+
+Break Points
+============
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs`, this is the default
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Expected Layout Structure
+=========================
+row
+...column
+......wrapper
+.........column content
+
+Example:
+
+<header class="row">
+    <div class="col-x">
+        <div class="wrapper">
+            column content...
+        </div>
+    </div>
+</header>
+<main class="container">
+    <section class="row">
+        <div class="col-x">
+            <div class="wrapper">
+                column content...
+            </div>
+        </div>
+    </section>
+    <aside class="row">
+        <div class="col-x">
+            <div class="wrapper">
+                column content...
+            </div>
+        </div>
+    </aside>
+</main>
+<footer class="row">
+    <div class="col-x">
+        <div class="wrapper">
+            column content...
+        </div>
+    </div>
+</footer>
+
+*/
+
+:root {
+    --sm: 540px; /* max-width for small breakpoint container */
+    --md: 720px; /* max-width for medium breakpoint container */
+    --lg: 960px; /* max-width for large breakpoint container */
+    --padding-grid: 16px; /* ensures equal spacing for column content  */
+    --numberOf-column: 12; /* number of columns in a row */
+}
+
+header,
+footer {
+    padding-left: var(--padding-grid); /* Needed to keep spacing consitent since the container class is not applied to the header or footer*/
+    padding-right: var(--padding-grid); /* Needed to keep spacing consitent since the container class is not applied to the header or footer*/
+}
+
+header {
+    padding-top: var(--padding-grid); /* Needed to keep spacing consitent since the container class is not applied to the header or footer*/
+}
+
+footer {
+    padding-bottom: var(--padding-grid); /* Needed to keep spacing consitent since the container class is not applied to the header or footer*/
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto; /* center container on page */
+    padding-left: var(--padding-grid);
+    padding-right: var(--padding-grid);
+}
+
+.row {
+    width: 100%;
+
+    display: flex; /* make column flex items */
+    flex-direction: row; /* columns flow from left to right */
+    flex-wrap: wrap; /* ensure flex items wrap when browser resizes */
+    justify-content: flex-start; 
+}
+
+.wrapper {
+    padding: var(--padding-grid);
+    height: 100%;
+}
+
+.col-1 {
+    flex-basis: calc(100% / var(--numberOf-column));
+}
+
+.col-2 {
+    flex-basis: calc((100% / var(--numberOf-column)) * 2);
+}
+
+.col-3 {
+    flex-basis: calc((100% / var(--numberOf-column)) * 3);
+}
+
+.col-4 {
+    flex-basis: calc((100% / var(--numberOf-column)) * 4);
+}
+
+.col-5 {
+    flex-basis: calc((100% / var(--numberOf-column)) * 5);
+}
+
+.col-6 {
+    flex-basis: calc((100% / var(--numberOf-column)) * 6);
+}
+
+.col-7 {
+    flex-basis: calc((100% / var(--numberOf-column)) * 7);
+}
+
+.col-8 {
+    flex-basis: calc((100% / var(--numberOf-column)) * 8);
+}
+
+.col-9 {
+    flex-basis: calc((100% / var(--numberOf-column)) * 9);
+}
+
+.col-10 {
+    flex-basis: calc((100% / var(--numberOf-column)) * 10);
+}
+
+.col-11 {
+    flex-basis: calc((100% / var(--numberOf-column)) * 11);
+}
+
+.col-12 {
+    flex-basis: calc((100% / var(--numberOf-column)) * 12);
+}
+
+/* Small breakpoint */
+@media (min-width: 576px) { 
+    .container {
+        max-width: var(--sm);
+    }
+
+    .col-sm-1 {
+        flex-basis: calc(100% / var(--numberOf-column));
+    }
+    
+    .col-sm-2 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 2);
+    }
+    
+    .col-sm-3 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 3);
+    }
+    
+    .col-sm-4 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 4) ;
+    }
+    
+    .col-sm-5 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 5);
+    }
+    
+    .col-sm-6 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 6);
+    }
+    
+    .col-sm-7 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 7);
+    }
+    
+    .col-sm-8 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 8);
+    }
+    
+    .col-sm-9 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 9);
+    }
+    
+    .col-sm-10 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 10);
+    }
+    
+    .col-sm-11 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 11);
+    }
+    
+    .col-sm-12 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 12);
+    }
+}
+
+/* Medium breakpoint */
+@media (min-width: 768px) { 
+    .container {
+        max-width: var(--md);
+    }
+
+    .col-md-1 {
+        flex-basis: calc(100% / var(--numberOf-column));
+    }
+    
+    .col-md-2 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 2);
+    }
+    
+    .col-md-3 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 3);
+    }
+    
+    .col-md-4 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 4);
+    }
+    
+    .col-md-5 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 5);
+    }
+    
+    .col-md-6 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 6);
+    }
+    
+    .col-md-7 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 7);
+    }
+    
+    .col-md-8 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 8);
+    }
+    
+    .col-md-9 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 9);
+    }
+    
+    .col-md-10 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 10);
+    }
+    
+    .col-md-11 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 11);
+    }
+    
+    .col-md-12 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 12);
+    }
+}
+
+/* Large breakpoint */
+@media (min-width: 992px) { 
+    .container {
+        max-width: var(--lg);
+    }
+
+    .col-lg-1 {
+        flex-basis: calc(100% / var(--numberOf-column));
+    }
+    
+    .col-lg-2 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 2);
+    }
+    
+    .col-lg-3 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 3);
+    }
+    
+    .col-lg-4 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 4);
+    }
+    
+    .col-lg-5 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 5);
+    }
+    
+    .col-lg-6 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 6);
+    }
+    
+    .col-lg-7 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 7);
+    }
+    
+    .col-lg-8 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 8);
+    }
+    
+    .col-lg-9 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 9);
+    }
+    
+    .col-lg-10 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 10);
+    }
+    
+    .col-lg-11 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 11);
+    }
+    
+    .col-lg-12 {
+        flex-basis: calc((100% / var(--numberOf-column)) * 12);
+    }
+}
