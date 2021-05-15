@@ -1,5 +1,135 @@
-$bg-color: pink;
+// Sass Maps
+$colors: (
+  primary-dark-blue: hsl(238, 29%, 16%),
+  primary-soft-red: hsl(14, 88%, 65%),
+  gradient-soft-violet: hsl(273, 75%, 66%),
+  gradient-soft-blue: hsl(240, 73%, 65%),
+  neutral-dark-gray: hsl(237, 12%, 33%),
+  neutral-gray-blue: hsl(240, 6%, 50%),
+  neutral-light-gray-blue: hsl(240, 5%, 91%),
+);
+
+$breakpoints: (
+  // Medium devices (tablets, 768px and up). Based on default font size of 16px.
+  medium: 48em
+);
+
+// Sass Functions
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// Simple Reset
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+// Start Design
+
+// For
+// - X-Small devices (portrait phones, less than 576px)
+// - Small devices (landscape phones, 576px and up)
+// -- No media query for X-Small and Small devices, this is the default
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
 
 body {
-  background-color: $bg-color;
+  background: linear-gradient(
+    180deg,
+    color(gradient-soft-violet) 0%,
+    color(gradient-soft-blue) 100%
+  );
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1em;
 }
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.c-card {
+  max-width: 375px;
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0px 30px 40px -5px rgba(0, 0, 0, 0.4);
+
+  &__title {
+    font-size: 1.75em;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.l-list {
+  margin: 20px 0;
+}
+
+.c-fold {
+  padding: 20px 0;
+  border-bottom: 1px solid color(neutral-light-gray-blue);
+
+  &__header {
+    font-size: 0.9em;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  &__header:hover {
+    color: color(primary-soft-red);
+    cursor: pointer;
+  }
+
+  &__text {
+    font-size: 0.9em;
+    font-weight: 400;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: map-get($breakpoints, medium)) {
+}
+
+// font-family: 'Kumbh Sans', sans-serif;
+// Weights: 400, 700
+
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
