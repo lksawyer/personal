@@ -91,6 +91,7 @@ main {
   &__title {
     font-size: 1.75em;
     font-weight: 700;
+    color: color(primary-dark-blue);
     text-align: center;
   }
 }
@@ -100,13 +101,13 @@ main {
 }
 
 .c-fold {
-  padding: 20px 0;
   border-bottom: 1px solid color(neutral-light-gray-blue);
 
   &__header {
     font-size: 0.9em;
     font-weight: 400;
-    margin-bottom: 20px;
+    color: color(neutral-dark-gray);
+    padding: 20px 0;
   }
 
   &__header:hover {
@@ -117,19 +118,29 @@ main {
   &__text {
     font-size: 0.9em;
     font-weight: 400;
+    color: color(neutral-gray-blue);
+    overflow-y: hidden;
+    height: 0;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: map-get($breakpoints, medium)) {
+  .c-card {
+    max-width: 1440px;
+  }
 }
 
-// font-family: 'Kumbh Sans', sans-serif;
-// Weights: 400, 700
+// State hooks
 
-// ## Layout
+.is-active {
+  .c-fold__header {
+    font-weight: 700;
+    color: color(primary-dark-blue);
+  }
 
-// The designs were created to the following widths:
-
-// - Mobile: 375px
-// - Desktop: 1440px
+  .c-fold__text {
+    height: auto;
+    padding-bottom: 20px;
+  }
+}
