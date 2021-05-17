@@ -102,12 +102,20 @@ main {
 
 .c-fold {
   border-bottom: 1px solid color(neutral-light-gray-blue);
+  display: flex;
+  flex-wrap: wrap;
 
   &__header {
     font-size: 0.9em;
     font-weight: 400;
     color: color(neutral-dark-gray);
     padding: 20px 0;
+    flex: 0 0 90%;
+
+    &.is-active {
+      font-weight: 700;
+      color: color(primary-dark-blue);
+    }
   }
 
   &__header:hover {
@@ -115,12 +123,35 @@ main {
     cursor: pointer;
   }
 
+  &__svg {
+    flex: 0 0 10%;
+    text-align: center;
+    padding: 20px 0;
+
+    &.is-active {
+      transform: rotate(180deg);
+      transition-property: transform;
+      transition-duration: 2s;
+      transition-timing-function: linear;
+    }
+  }
+
   &__text {
     font-size: 0.9em;
     font-weight: 400;
     color: color(neutral-gray-blue);
+    flex: 0 0 90%;
+    height: auto;
+    max-height: 0;
     overflow-y: hidden;
-    height: 0;
+    transition-property: max-height;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+
+    &.is-active {
+      max-height: 500px;
+      padding-bottom: 20px;
+    }
   }
 }
 
@@ -128,19 +159,5 @@ main {
 @media (min-width: map-get($breakpoints, medium)) {
   .c-card {
     max-width: 1440px;
-  }
-}
-
-// State hooks
-
-.is-active {
-  .c-fold__header {
-    font-weight: 700;
-    color: color(primary-dark-blue);
-  }
-
-  .c-fold__text {
-    height: auto;
-    padding-bottom: 20px;
   }
 }
