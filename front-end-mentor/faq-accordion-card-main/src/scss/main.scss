@@ -129,10 +129,6 @@ main {
     padding: 20px 0;
 
     &.is-active {
-      transform: rotate(180deg);
-      transition-property: transform;
-      transition-duration: 2s;
-      transition-timing-function: linear;
     }
   }
 
@@ -141,16 +137,9 @@ main {
     font-weight: 400;
     color: color(neutral-gray-blue);
     flex: 0 0 90%;
-    height: auto;
-    max-height: 0;
-    overflow-y: hidden;
-    transition-property: max-height;
-    transition-duration: 2s;
-    transition-timing-function: linear;
+    overflow: hidden;
 
     &.is-active {
-      max-height: 500px;
-      padding-bottom: 20px;
     }
   }
 }

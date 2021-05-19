@@ -91,29 +91,13 @@ main {
   text-align: center;
   padding: 20px 0;
 }
-.c-fold__svg.is-active {
-  transform: rotate(180deg);
-  transition-property: transform;
-  transition-duration: 2s;
-  transition-timing-function: linear;
-}
 .c-fold__text {
   font-size: 0.9em;
   font-weight: 400;
   color: #787887;
   flex: 0 0 90%;
-  height: auto;
-  max-height: 0;
-  overflow-y: hidden;
-  transition-property: max-height;
-  transition-duration: 2s;
-  transition-timing-function: linear;
+  overflow: hidden;
 }
-.c-fold__text.is-active {
-  max-height: 500px;
-  padding-bottom: 20px;
-}
-
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 48em) {
   .c-card {
