@@ -1,4 +1,6 @@
 let text_height = [];
+// This should be the value of the padding you want below .c-fold__text
+let text_padding = 20;
 
 $(document).ready(function () {
   console.log("scripts loaded");
@@ -28,11 +30,13 @@ $(document).ready(function () {
   });
 });
 
-// Set css height property to its original value
+// Set css height property to its original value + text_padding
 function add_height(e) {
   // Store the index value of the selected .c-fold__text
   let current_index = $(e.currentTarget.children[2]).attr("data-fold");
-  $(e.currentTarget.children[2]).height(text_height[current_index]);
+  $(e.currentTarget.children[2]).height(
+    text_height[current_index] + text_padding
+  );
 }
 
 // Set css height property to 0
