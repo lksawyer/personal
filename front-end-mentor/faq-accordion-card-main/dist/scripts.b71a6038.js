@@ -118,7 +118,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"scripts.js":[function(require,module,exports) {
-var text_height = [];
+var text_height = []; // This should be the value of the padding you want below .c-fold__text
+
+var text_padding = 20;
 $(document).ready(function () {
   console.log("scripts loaded"); // Get the height of all .c-fold__text elements
   // Store these values in an array
@@ -143,12 +145,12 @@ $(document).ready(function () {
       add_height(e);
     }
   });
-}); // Set css height property to its original value
+}); // Set css height property to its original value + text_padding
 
 function add_height(e) {
   // Store the index value of the selected .c-fold__text
   var current_index = $(e.currentTarget.children[2]).attr("data-fold");
-  $(e.currentTarget.children[2]).height(text_height[current_index]);
+  $(e.currentTarget.children[2]).height(text_height[current_index] + text_padding);
 } // Set css height property to 0
 
 
@@ -204,7 +206,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56633" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55383" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -90,6 +90,10 @@ main {
   flex: 0 0 10%;
   text-align: center;
   padding: 20px 0;
+  transition: all 0.3s ease-out;
+}
+.c-fold__svg.is-active {
+  transform: rotate(180deg);
 }
 .c-fold__text {
   font-size: 0.9em;
@@ -97,9 +101,7 @@ main {
   color: #787887;
   flex: 0 0 90%;
   overflow: hidden;
-}
-.c-fold__text.is-active {
-  padding-bottom: 20px;
+  transition: all 0.3s ease-out;
 }
 
 /* Medium devices (tablets, 768px and up) */
