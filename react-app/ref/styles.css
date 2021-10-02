@@ -1,0 +1,222 @@
+/* Minimal CSS reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(./assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(./assets/fonts/Roboto/Roboto-Bold.ttf);
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #ebebeb;
+}
+
+.layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  background-color: #ffffff;
+  background-image: url(./assets/media/img/peppers.png);
+  background-repeat: no-repeat;
+  background-position: 110% 15%;
+  padding: 1rem;
+}
+
+.logo__img {
+  width: auto;
+  max-height: 75px;
+  object-fit: contain;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  background-color: #ce0a24;
+  padding: 1rem;
+}
+
+.product__title {
+}
+
+.product__text {
+  font-family: "Roboto-Bold";
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.product__form {
+}
+
+.product__select {
+  padding: 0.25rem;
+  font-family: "Roboto-Regular";
+  font-size: 1rem;
+  color: #000000;
+}
+
+.main {
+  flex-grow: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  padding-bottom: 1rem;
+}
+
+.nav__tabs {
+  display: flex;
+}
+
+.nav__item {
+  flex: 0 0 50%;
+  text-align: center;
+}
+
+.nav__link {
+  padding: 0.25rem;
+  font-family: "Roboto-Bold";
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.online {
+  flex-grow: 1;
+  position: relative;
+}
+
+.online__retailers {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow-y: auto;
+}
+
+.card {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.card__img {
+  height: max-content;
+  max-height: 42px;
+  width: auto;
+}
+
+.card__stock {
+  font-family: "Roboto-Regular";
+  font-size: 0.6rem;
+  color: #ffffff;
+  background-color: green;
+  padding: 0.25rem 0.5rem;
+  height: max-content;
+}
+
+.card__buy {
+  font-family: "Roboto-Regular";
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #000000;
+  background-color: yellow;
+  padding: 0.75rem 1.25rem;
+  height: max-content;
+  text-transform: uppercase;
+}
+
+.footer {
+  padding: 1rem;
+  background-color: #000000;
+}
+
+.footer__link {
+  font-family: "Roboto-Regular";
+  font-size: 0.75rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__img {
+  height: max-content;
+  max-height: 20px;
+  width: auto;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    max-height: 720px;
+    max-width: 960px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
