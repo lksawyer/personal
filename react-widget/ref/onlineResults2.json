@@ -1,0 +1,105 @@
+{
+  "id": "parentSKU",
+  "title": "This is the generic parent title",
+  "children": [
+    {
+      "id": "child1",
+      "title": "This is the child 1 title",
+      "variant": "Size 1",
+      "offers": [
+        {
+          "id": "onlineOffer1",
+          "retailer": "target",
+          "stock": true,
+          "cta": "https://www.target.com/"
+        },
+        {
+          "id": "onlineOffer2",
+          "retailer": "walmart",
+          "stock": false,
+          "cta": "https://www.walmart.com/"
+        },
+        {
+          "id": "onlineOffer3",
+          "retailer": "target",
+          "stock": true,
+          "cta": "https://www.target.com/"
+        }
+      ]
+    },
+    {
+      "id": "child2",
+      "title": "This is the child 2 title",
+      "variant": "Size 2",
+      "offers": [
+        {
+          "id": "onlineOffer1",
+          "retailer": "instacart",
+          "stock": true,
+          "cta": "https://www.instacart.com/"
+        },
+        {
+          "id": "onlineOffer2",
+          "retailer": "heb",
+          "stock": false,
+          "cta": "https://www.heb.com/"
+        },
+        {
+          "id": "onlineOffer3",
+          "retailer": "instacart",
+          "stock": true,
+          "cta": "https://www.instacart.com/"
+        },
+        {
+          "id": "onlineOffer4",
+          "retailer": "heb",
+          "stock": false,
+          "cta": "https://www.heb.com/"
+        }
+      ]
+    },
+    {
+      "id": "child3",
+      "title": "This is the child 3 title",
+      "variant": "Size 3",
+      "offers": [
+        {
+          "id": "onlineOffer1",
+          "retailer": "instacart",
+          "stock": true,
+          "cta": "https://www.instacart.com/"
+        },
+        {
+          "id": "onlineOffer2",
+          "retailer": "heb",
+          "stock": false,
+          "cta": "https://www.heb.com/"
+        },
+        {
+          "id": "onlineOffer3",
+          "retailer": "instacart",
+          "stock": true,
+          "cta": "https://www.instacart.com/"
+        },
+        {
+          "id": "onlineOffer4",
+          "retailer": "heb",
+          "stock": false,
+          "cta": "https://www.heb.com/"
+        },
+        {
+          "id": "onlineOffer5",
+          "retailer": "instacart",
+          "stock": true,
+          "cta": "https://www.instacart.com/"
+        },
+        {
+          "id": "onlineOffer6",
+          "retailer": "heb",
+          "stock": false,
+          "cta": "https://www.heb.com/"
+        }
+      ]
+    }
+  ]
+}

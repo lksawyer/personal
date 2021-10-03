@@ -1,0 +1,34 @@
+.online-retailer-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+}
+
+.online-retailer-card__img {
+  height: max-content;
+  max-height: 42px; /* generic height brand logos are set to */
+  width: auto;
+}
+
+.online-retailer-card__stock {
+  height: max-content;
+  padding: 0.25rem 0.5rem;
+  background: green;
+  color: white;
+}
+
+.online-retailer-card_CTA {
+  height: max-content;
+  padding: 0.5rem 1rem;
+  background-color: yellow;
+  color: black;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+
+.online-retailer-card_CTA:hover {
+  border: 2px solid black;
+}
