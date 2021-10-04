@@ -5,7 +5,7 @@ This react application is modeled after the applications I currently build for t
 ## Table of Contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [The project](#the-project)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My Process](#my-process)
@@ -18,9 +18,17 @@ This react application is modeled after the applications I currently build for t
 
 ## Overview
 
-### The challenge
+### The project
+
+This react app will perform the following actions:
+
+- Given a JSON object, this application will render online offers for a selected child
+- A new set of online offers will be dynamically rendered to the DOM when a new product is selected
+- Fully responsive UI
 
 ### Screenshot
+
+./react-app-screenshot.png
 
 ### Links
 
