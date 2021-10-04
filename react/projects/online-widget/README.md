@@ -56,22 +56,31 @@ Here are some code snippets of core React concepts I learned/implemented into th
 
 Implement state using array destructuring
 
-```react
-import styles from "./WidgetHeader.module.css";
-
-<img src={logo} alt="brand logo" className={styles.header__img} />
+```
+ const [childProduct, setChildProduct] = useState(0);
 ```
 
 Dynamically render React components using the .map arrary method
 
 ```
-
+<div className={styles.online}>
+    {props.onlineResults.children[props.childProduct].offers.map((offer) => (
+    <OnlineRetailerCard
+        key={offer.id}
+        retailer={offer.retailer}
+        stock={offer.stock}
+        cta={offer.cta}
+    />
+    ))}
+</div>
 ```
 
 Component Scoped CSS using CSS modules
 
 ```
+import styles from "./WidgetHeader.module.css";
 
+<img src={logo} alt="brand logo" className={styles.header__img} />
 ```
 
 #### Continued development
