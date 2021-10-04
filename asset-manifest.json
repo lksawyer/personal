@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/personal/react/projects/online-widget/static/css/main.01dd2094.chunk.css",
+    "main.js": "/personal/react/projects/online-widget/static/js/main.aee05def.chunk.js",
+    "main.js.map": "/personal/react/projects/online-widget/static/js/main.aee05def.chunk.js.map",
+    "runtime-main.js": "/personal/react/projects/online-widget/static/js/runtime-main.9cc3aa57.js",
+    "runtime-main.js.map": "/personal/react/projects/online-widget/static/js/runtime-main.9cc3aa57.js.map",
+    "static/js/2.294429bc.chunk.js": "/personal/react/projects/online-widget/static/js/2.294429bc.chunk.js",
+    "static/js/2.294429bc.chunk.js.map": "/personal/react/projects/online-widget/static/js/2.294429bc.chunk.js.map",
+    "static/js/3.7ca223e5.chunk.js": "/personal/react/projects/online-widget/static/js/3.7ca223e5.chunk.js",
+    "static/js/3.7ca223e5.chunk.js.map": "/personal/react/projects/online-widget/static/js/3.7ca223e5.chunk.js.map",
+    "index.html": "/personal/react/projects/online-widget/index.html",
+    "static/css/main.01dd2094.chunk.css.map": "/personal/react/projects/online-widget/static/css/main.01dd2094.chunk.css.map",
+    "static/js/2.294429bc.chunk.js.LICENSE.txt": "/personal/react/projects/online-widget/static/js/2.294429bc.chunk.js.LICENSE.txt",
+    "static/media/App.module.css": "/personal/react/projects/online-widget/static/media/Poppins-Regular.8081832f.ttf",
+    "static/media/header-bg.6979b399.png": "/personal/react/projects/online-widget/static/media/header-bg.6979b399.png",
+    "static/media/logo.70798d07.png": "/personal/react/projects/online-widget/static/media/logo.70798d07.png",
+    "static/media/walmart.40c821b0.png": "/personal/react/projects/online-widget/static/media/walmart.40c821b0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9cc3aa57.js",
+    "static/js/2.294429bc.chunk.js",
+    "static/css/main.01dd2094.chunk.css",
+    "static/js/main.aee05def.chunk.js"
+  ]
+}
