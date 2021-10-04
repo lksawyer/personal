@@ -1,10 +1,10 @@
 # React Online Widget
 
-This react application is modeled after the applications I currently build for my the company I work at.
+This react application is modeled after the applications I currently build for the company I work at.
 
 ## Table of Contents
 
-- Overview
+- [Overview](Overview)
   - The challenge
   - Screenshot
   - Links
