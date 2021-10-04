@@ -56,7 +56,7 @@ Here are some code snippets of core React concepts I learned/implemented into th
 
 Implement state using array destructuring
 
-```
+```react
 import styles from "./WidgetHeader.module.css";
 
 <img src={logo} alt="brand logo" className={styles.header__img} />
