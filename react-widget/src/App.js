@@ -7,6 +7,7 @@ import MainNav from "./components/MainNav/MainNav";
 import OnlineRetailerCard from "./components/OnlineRetailer/OnlineRetailerCard";
 import { useState } from "react";
 import Footer from "./components/Footer/Footer";
+import Online from "./components/Online/Online";
 
 const onlineResults = {
   id: "parentSKU",
@@ -96,22 +97,6 @@ const App = () => {
   // Add all variant values to the variants array
   onlineResults.children.forEach((element) => variants.push(element.variant));
 
-  // Conditional logic for rendering onlineRetailer Cards
-  let onlineRetailers = <OnlineRetailerCard retailer={""} />;
-
-  if (onlineResults.children[childProduct].offers.length > 0) {
-    onlineRetailers = onlineResults.children[childProduct].offers.map(
-      (offer) => (
-        <OnlineRetailerCard
-          key={offer.id}
-          retailer={offer.retailer}
-          stock={offer.stock}
-          cta={offer.cta}
-        />
-      )
-    );
-  }
-
   return (
     <Wrapper className={styles.container}>
       <WidgetHeader />
@@ -122,7 +107,9 @@ const App = () => {
         onChangeProductOption={changeProductOptionHandler}
       />
       <MainNav />
-      <Wrapper className={styles.onlineWrapper}>{onlineRetailers}</Wrapper>
+      <Wrapper className={styles["online-wrapper"]}>
+        <Online onlineResults={onlineResults} childProduct={childProduct} />
+      </Wrapper>
       <Footer />
     </Wrapper>
   );
