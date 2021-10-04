@@ -118,6 +118,12 @@ img {
 @media (min-width: 576px) {
 }
 
+@media (min-width: 1px) and (max-width: 767px) and (orientation: landscape) {
+  .container {
+    height: 200vh;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .container {
