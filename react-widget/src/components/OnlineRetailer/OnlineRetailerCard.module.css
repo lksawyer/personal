@@ -14,7 +14,7 @@
 
 .online-retailer-card__img {
   height: max-content;
-  max-height: 42px; /* generic height brand logos are set to */
+  max-height: 35px; /* generic height brand logos are set to */
   width: auto;
 }
 
@@ -32,7 +32,7 @@
   text-decoration: none;
   font-family: "Poppins-Medium";
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: #ffffff;
 }
