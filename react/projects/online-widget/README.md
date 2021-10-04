@@ -20,10 +20,11 @@ This react application is modeled after the applications I currently build for t
 
 ### The project
 
-This react app will perform the following actions:
+This react app is capable of the following:
 
-- Given a JSON object, this application will render online offers for a selected child
-- A new set of online offers will be dynamically rendered to the DOM when a new product is selected
+- Given a JSON object:
+  - Render selected child's parent title, title and online offers
+  - Dynamically render a new set of data when a new product is selected
 - Fully responsive UI
 
 ### Screenshot
