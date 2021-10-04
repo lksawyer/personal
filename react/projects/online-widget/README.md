@@ -85,7 +85,7 @@ import styles from "./WidgetHeader.module.css";
 
 #### Continued development
 
-In the future, I would like to incorporate the following React concepts into my projects:
+In future projects, I would like to incorporate the following React concepts:
 
 - Optimization
 - Class based components
