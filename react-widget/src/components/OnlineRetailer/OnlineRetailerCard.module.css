@@ -2,9 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid black;
   margin-bottom: 0.5rem;
-  padding: 0.5rem;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.online-retailer-card__no-stock {
+  font-family: "Poppins-Italic";
+  font-size: 0.75rem;
 }
 
 .online-retailer-card__img {
@@ -15,20 +20,23 @@
 
 .online-retailer-card__stock {
   height: max-content;
-  padding: 0.25rem 0.5rem;
-  background: green;
-  color: white;
+  font-family: "Poppins-Italic";
+  font-size: 0.75rem;
 }
 
 .online-retailer-card_CTA {
   height: max-content;
   padding: 0.5rem 1rem;
-  background-color: yellow;
-  color: black;
+  background-color: #5646a6;
+  color: #000000;
   text-decoration: none;
-  border: 2px solid transparent;
+  font-family: "Poppins-Medium";
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
 }
 
 .online-retailer-card_CTA:hover {
-  border: 2px solid black;
+  background-color: #aa68bf;
 }

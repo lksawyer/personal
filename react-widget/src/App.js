@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 
 import Wrapper from "./components/UI/Wrapper";
 import WidgetHeader from "./components/WidgetHeader/WidgetHeader";
@@ -6,6 +6,7 @@ import Product from "./components/Product/Product";
 import MainNav from "./components/MainNav/MainNav";
 import OnlineRetailerCard from "./components/OnlineRetailer/OnlineRetailerCard";
 import { useState } from "react";
+import Footer from "./components/Footer/Footer";
 
 const onlineResults = {
   id: "parentSKU",
@@ -15,6 +16,31 @@ const onlineResults = {
       id: "child1",
       title: "This is the child 1 title",
       variant: "Size 1",
+      offers: [],
+    },
+    {
+      id: "child2",
+      title: "This is the child 2 title",
+      variant: "Size 2",
+      offers: [
+        {
+          id: "onlineOffer1",
+          retailer: "walmart",
+          stock: false,
+          cta: "https://www.walmart.com/",
+        },
+        {
+          id: "onlineOffer2",
+          retailer: "target",
+          stock: true,
+          cta: "https://www.target.com/",
+        },
+      ],
+    },
+    {
+      id: "child3",
+      title: "This is the child 3 title",
+      variant: "Size 3",
       offers: [
         {
           id: "onlineOffer1",
@@ -30,80 +56,12 @@ const onlineResults = {
         },
         {
           id: "onlineOffer3",
-          retailer: "target",
-          stock: true,
-          cta: "https://www.target.com/",
-        },
-      ],
-    },
-    {
-      id: "child2",
-      title: "This is the child 2 title",
-      variant: "Size 2",
-      offers: [
-        {
-          id: "onlineOffer1",
-          retailer: "instacart",
-          stock: true,
-          cta: "https://www.instacart.com/",
-        },
-        {
-          id: "onlineOffer2",
-          retailer: "heb",
-          stock: false,
-          cta: "https://www.heb.com/",
-        },
-        {
-          id: "onlineOffer3",
           retailer: "instacart",
           stock: true,
           cta: "https://www.instacart.com/",
         },
         {
           id: "onlineOffer4",
-          retailer: "heb",
-          stock: false,
-          cta: "https://www.heb.com/",
-        },
-      ],
-    },
-    {
-      id: "child3",
-      title: "This is the child 3 title",
-      variant: "Size 3",
-      offers: [
-        {
-          id: "onlineOffer1",
-          retailer: "instacart",
-          stock: true,
-          cta: "https://www.instacart.com/",
-        },
-        {
-          id: "onlineOffer2",
-          retailer: "heb",
-          stock: false,
-          cta: "https://www.heb.com/",
-        },
-        {
-          id: "onlineOffer3",
-          retailer: "instacart",
-          stock: true,
-          cta: "https://www.instacart.com/",
-        },
-        {
-          id: "onlineOffer4",
-          retailer: "heb",
-          stock: false,
-          cta: "https://www.heb.com/",
-        },
-        {
-          id: "onlineOffer5",
-          retailer: "instacart",
-          stock: true,
-          cta: "https://www.instacart.com/",
-        },
-        {
-          id: "onlineOffer6",
           retailer: "heb",
           stock: false,
           cta: "https://www.heb.com/",
@@ -114,19 +72,12 @@ const onlineResults = {
 };
 
 const App = () => {
-  // === Auxillary task ===
-  // Will store all variant values in an array
-  let variants = [];
-
-  // Add all variant values to the variants array
-  onlineResults.children.forEach((element) => variants.push(element.variant));
-
-  // === State ===
+  // ====== State ======
   // Default state value is the 0 index of onlineResults.children[0]
   // - this refers to the first child product in the onlineResults.children array
   const [childProduct, setChildProduct] = useState(0);
 
-  // === Handlers ===
+  // ====== Handlers ======
   const changeProductOptionHandler = (selectedProductOption) => {
     // We want to return the index of the onlineResults.children[i] where the
     // newly selected child variant matches onlineResults.children[i].variant
@@ -138,8 +89,31 @@ const App = () => {
     });
   };
 
+  // ====== Auxillary task ======
+  // An array used to store all variant values
+  let variants = [];
+
+  // Add all variant values to the variants array
+  onlineResults.children.forEach((element) => variants.push(element.variant));
+
+  // Conditional logic for rendering onlineRetailer Cards
+  let onlineRetailers = <OnlineRetailerCard retailer={""} />;
+
+  if (onlineResults.children[childProduct].offers.length > 0) {
+    onlineRetailers = onlineResults.children[childProduct].offers.map(
+      (offer) => (
+        <OnlineRetailerCard
+          key={offer.id}
+          retailer={offer.retailer}
+          stock={offer.stock}
+          cta={offer.cta}
+        />
+      )
+    );
+  }
+
   return (
-    <Wrapper>
+    <Wrapper className={styles.container}>
       <WidgetHeader />
       <Product
         parentTitle={onlineResults.title}
@@ -148,16 +122,8 @@ const App = () => {
         onChangeProductOption={changeProductOptionHandler}
       />
       <MainNav />
-      <Wrapper>
-        {onlineResults.children[childProduct].offers.map((offer) => (
-          <OnlineRetailerCard
-            key={offer.id}
-            retailer={offer.retailer}
-            stock={offer.stock}
-            cta={offer.cta}
-          />
-        ))}
-      </Wrapper>
+      <Wrapper className={styles.onlineWrapper}>{onlineRetailers}</Wrapper>
+      <Footer />
     </Wrapper>
   );
 };

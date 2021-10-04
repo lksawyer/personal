@@ -1,0 +1,17 @@
+.main-nav {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-nav__item {
+}
+
+.main-nav__link {
+  font-family: "Poppins-Medium";
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+}

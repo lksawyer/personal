@@ -1,0 +1,26 @@
+.product {
+  padding: 1rem;
+  background-color: #182365;
+}
+
+.product__parent-title {
+  margin-bottom: 0.5rem;
+  font-family: "Poppins-Medium";
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.product__child-title {
+  margin-bottom: 0.5rem;
+  font-family: "Poppins-Italic";
+  font-size: 0.75rem;
+  color: #ffffff;
+}
+
+.product__select {
+  font-family: "Poppins-Regular";
+  font-size: 0.75rem;
+  padding: 0.25rem;
+}

@@ -1,4 +1,4 @@
-import "./Product.css";
+import styles from "./Product.module.css";
 import ProductOption from "./ProductOption";
 
 const Product = (props) => {
@@ -7,11 +7,14 @@ const Product = (props) => {
   };
 
   return (
-    <div className="product">
-      <p className="product__parent-title">{props.parentTitle}</p>
-      <p className="product__child-title">{props.childTitle}</p>
+    <div className={styles.product}>
+      <p className={styles["product__parent-title"]}>{props.parentTitle}</p>
+      <p className={styles["product__child-title"]}>{props.childTitle}</p>
 
-      <select className="product__select" onChange={dropdownChangeHandler}>
+      <select
+        className={styles["product__select"]}
+        onChange={dropdownChangeHandler}
+      >
         {props.variants.map((variant) => (
           <ProductOption key={variant} variant={variant} />
         ))}

@@ -1,0 +1,27 @@
+/* X-Small devices (portrait phones, less than 576px) */
+.header {
+  background-color: #ffffff;
+  padding: 1rem;
+  background-size: 85% auto;
+  background-repeat: no-repeat;
+  background-position: 150% bottom;
+  background-color: #ffffff;
+}
+
+.header__img {
+  width: auto;
+  max-height: 75px;
+  object-fit: contain;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
