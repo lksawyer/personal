@@ -85,6 +85,14 @@ import styles from "./WidgetHeader.module.css";
 
 #### Continued development
 
+In the future, I would like to incorporate the following React concepts into my projects:
+
+- Optimization
+- Class based components
+- Routing
+- Redux
+- HTTPs request
+
 ## Author
 
 Logan Sawyer - Front End Developer
