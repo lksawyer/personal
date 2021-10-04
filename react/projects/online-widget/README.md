@@ -16,24 +16,24 @@ This react application is modeled after the applications I currently build for t
 - [Author](#author)
 - [Acknowledgements](#acknowledgements)
 
-### Overview
+## Overview
 
-#### The challenge
+### The challenge
 
-#### Screenshot
+### Screenshot
 
-#### Links
+### Links
 
-### My Process
+## My Process
 
-#### Built with
+### Built with
 
-#### What I learned
+### What I learned
 
-#### Continued development
+### Continued development
 
-#### Useful resources
+### Useful resources
 
-### Author
+## Author
 
-### Acknowledgements
+## Acknowledgements
