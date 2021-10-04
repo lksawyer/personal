@@ -1,31 +1,39 @@
 # React Online Widget
 
-This react application is modeled after the applications I currently build at my day job.
+This react application is modeled after the applications I currently build for my the company I work at.
 
-Table of Contents
+## Table of Contents
 
-Overview
+- Overview
+  - The challenge
+  - Screenshot
+  - Links
+- My Process
+  - Built with
+  - What I learned
+  - Continued development
+  - Useful resources
+- Author
+- Acknowledgements
 
-- The challenge
-- Screenshot
-- Links
-  My Process
-- Built with
-- What I learned
-- Continued development
-- Useful resources
-  Author
-  Acknowledgements
+### Overview
 
-Overview
+#### The challenge
 
-- The challenge
-- Screenshot
-- Links
-  My Process
-- Built with
-- What I learned
-- Continued development
-- Useful resources
-  Author
-  Acknowledgements
+#### Screenshot
+
+#### Links
+
+### My Process
+
+#### Built with
+
+#### What I learned
+
+#### Continued development
+
+#### Useful resources
+
+### Author
+
+### Acknowledgements
