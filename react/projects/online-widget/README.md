@@ -1,10 +1,6 @@
 # React Online Widget
 
-<hr />
-
 This react application is modeled after the applications I currently build at my day job.
-
-<hr />
 
 Table of Contents
 
