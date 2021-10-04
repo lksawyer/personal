@@ -28,7 +28,7 @@ This react app will perform the following actions:
 
 ### Screenshot
 
-./react-app-screenshot.png
+![react-app-screenshot](./react-app-screenshot.png)
 
 ### Links
 
