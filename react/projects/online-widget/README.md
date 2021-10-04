@@ -17,7 +17,7 @@ This react application is modeled after the applications I currently build for t
 
 ## Overview
 
-### The project
+#### The project
 
 This react app is capable of the following:
 
@@ -26,17 +26,17 @@ This react app is capable of the following:
   - Dynamically render a new set of data when a new product is selected
 - Fully responsive UI
 
-### Screenshot
+#### Screenshot
 
 ![react-app-screenshot](./react-app-screenshot.png)
 
-### Links
+#### Links
 
 - [github pages:](#)
 
 ## My Process
 
-### Built with
+#### Built with
 
 - HTML5 markup
 - CSS3
@@ -45,15 +45,36 @@ This react app is capable of the following:
 - BEM
 - ES6
   - Arrow functions
+  - Array destructuring
   - Modern Array methods
   - Import/ Export modules
 - React - JS library
 
-### What I learned
+#### What I learned
 
 Here are some code snippets of core React concepts I learned/implemented into this project during development:
 
-### Continued development
+Implement state using array destructuring
+
+```
+import styles from "./WidgetHeader.module.css";
+
+<img src={logo} alt="brand logo" className={styles.header__img} />
+```
+
+Dynamically render React components using the .map arrary method
+
+```
+
+```
+
+Component Scoped CSS using CSS modules
+
+```
+
+```
+
+#### Continued development
 
 ## Author
 
