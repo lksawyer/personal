@@ -14,7 +14,6 @@ This react application is modeled after the applications I currently build for t
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgements](#acknowledgements)
 
 ## Overview
 
@@ -33,16 +32,29 @@ This react app is capable of the following:
 
 ### Links
 
+- [github pages:](#)
+
 ## My Process
 
 ### Built with
 
+- HTML5 markup
+- CSS3
+  - Flexbox
+- Mobile-first workflow
+- BEM
+- ES6
+  - Arrow functions
+  - Modern Array methods
+  - Import/ Export modules
+- React - JS library
+
 ### What I learned
+
+Here are some code snippets of core React concepts I learned/implemented into this project during development:
 
 ### Continued development
 
-### Useful resources
-
 ## Author
 
-## Acknowledgements
+Logan Sawyer - Front End Developer
