@@ -32,7 +32,7 @@ This react app is capable of the following:
 
 #### Links
 
-- [github pages:](https://lksawyer.github.io/personal/)
+- [Deployed Application](https://lksawyer.github.io/personal/)
 
 ## My Process
 
