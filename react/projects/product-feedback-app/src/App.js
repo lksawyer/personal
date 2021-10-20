@@ -4,6 +4,7 @@ import SidebarCategory from './components/Sidebar/SidebarCategory';
 import SidebarHeader from './components/Sidebar/SidebarHeader';
 import SidebarRoadmap from './components/Sidebar/SidebarRoadmap';
 import Suggestion from './components/Suggestion/Suggestion';
+import SuggestionProductRequests from './components/Suggestion/SuggestionProductRequests';
 import SuggestionSort from './components/Suggestion/SuggestionSort';
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       </Sidebar>
       <Suggestion>
         <SuggestionSort />
+        <SuggestionProductRequests />
       </Suggestion>
     </Layout>
   );
