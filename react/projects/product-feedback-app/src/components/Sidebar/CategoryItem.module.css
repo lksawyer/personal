@@ -1,0 +1,22 @@
+.category {
+  border-radius: 0.625rem;
+  padding: 0.375rem 0.875rem;
+  margin: 0 0.5rem 0.875rem 0;
+  background-color: #f2f4ff;
+  color: #4661e6;
+  display: inline-block;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.813rem;
+  line-height: 1.188rem;
+}
+
+.category:hover {
+  background-color: #cfd7ff;
+}
+
+.category.active {
+  background-color: #4661e6;
+  color: #ffffff;
+}

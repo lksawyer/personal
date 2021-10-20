@@ -1,0 +1,9 @@
+.layout {
+  max-width: 1110px;
+  max-height: 1102px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 94px 0;
+  margin: 0 auto;
+  display: flex;
+}

@@ -1,0 +1,73 @@
+/* === Reset === */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === End Reset === */
+
+/* === Design System === */
+
+/* --colors */
+
+:root {
+  --blue: #62bcfa;
+  --blue-10: #4661e6;
+  --gray: #f7f8fd;
+  --gray-20: #f2f4ff;
+  --gray-30: #647196;
+  --gray-40: #3a4374;
+  --gray-50: #373f68;
+  --orange: #f49f85;
+  --purple: #ad1fea;
+  --white: #ffffff;
+}
+
+/* === End Design System === */
+
+/*=== Styles === */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+html {
+  font-family: 'Jost', sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}
