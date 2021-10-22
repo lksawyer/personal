@@ -1,22 +1,27 @@
+import { useSelector } from 'react-redux';
 import Card from '../UI/Card';
 import CategoryItem from './CategoryItem';
 import classes from './SidebarCategory.module.css';
 
-const DUMMY_CATEGORY_LIST = [
-  'All',
-  'UI',
-  'UX',
-  'Enhancement',
-  'Bug',
-  'Feature',
-];
-
 const SidebarCategory = (props) => {
+  // Use redux to pull out categories obj
+  const categoryList = useSelector((state) => {
+    // Flatten state.updatedData.categories obj
+    return Object.keys(state.updatedData.categories).map((key) => [
+      key,
+      state.updatedData.categories[key],
+    ]);
+  });
+
   return (
     <Card>
       <ul className={classes.test}>
-        {DUMMY_CATEGORY_LIST.map((category) => (
-          <CategoryItem category={category} key={Math.random()} />
+        {categoryList.map((category) => (
+          <CategoryItem
+            category={category[0]}
+            key={Math.random()}
+            active={category[1]}
+          />
         ))}
       </ul>
     </Card>

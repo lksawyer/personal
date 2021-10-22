@@ -49,17 +49,22 @@
   font-size: 1rem;
   line-height: 1.438rem;
   color: #647196;
+  text-transform: capitalize;
 }
 
-.roadmap__list-item:nth-child(1)::marker {
+.roadmap__list-item:first-child::marker {
   color: #f49f85;
 }
 
-.roadmap__list-item:nth-child(2)::marker {
+.roadmap__list-item:nth-child(n + 1)::marker {
+  color: #f49f85;
+}
+
+.roadmap__list-item:nth-child(n + 2)::marker {
   color: #ad1fea;
 }
 
-.roadmap__list-item:nth-child(3)::marker {
+.roadmap__list-item:nth-child(n + 3)::marker {
   color: #62bcfa;
 }
 
