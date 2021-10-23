@@ -5,6 +5,11 @@
   display: flex;
   justify-content: left;
   align-items: center;
+  height: max-content;
+}
+
+.sort__Icon {
+  padding-right: 1rem;
 }
 
 .sort__count {
@@ -13,6 +18,7 @@
   line-height: 1.625rem;
   letter-spacing: -0.016rem;
   color: #ffffff;
+  padding-left: 1rem;
   padding-right: 2.375rem;
 }
 

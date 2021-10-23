@@ -6,7 +6,7 @@ const SidebarRoadmap = (params) => {
   // Use redux to pull out list of roadmap items
   const roadmapItemArray = useSelector((state) => {
     // Returns array of productReqquests
-    return state.updatedData.productRequests.map((request) => {
+    return state.suggestion.productRequests.map((request) => {
       return request.status;
     });
   });

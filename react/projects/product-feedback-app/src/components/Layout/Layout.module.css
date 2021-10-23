@@ -1,8 +1,8 @@
 .layout {
+  height: 100vh;
   max-width: 1110px;
   max-height: 1102px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   padding: 94px 0;
   margin: 0 auto;
   display: flex;

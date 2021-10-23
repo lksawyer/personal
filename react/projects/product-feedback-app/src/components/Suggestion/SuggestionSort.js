@@ -1,9 +1,11 @@
+import IconSuggestion from '../SVG/IconSuggestion';
 import Card from '../UI/Card';
 import classes from './SuggestionSort.module.css';
 
 const SuggestionSort = (props) => {
   return (
     <Card classes={classes.sort}>
+      <IconSuggestion />
       <p className={classes.sort__count}>
         <span>0</span> Suggestions
       </p>
