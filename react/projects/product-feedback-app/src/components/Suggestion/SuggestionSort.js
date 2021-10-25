@@ -1,13 +1,16 @@
+import React from 'react';
 import IconSuggestion from '../SVG/IconSuggestion';
 import Card from '../UI/Card';
 import classes from './SuggestionSort.module.css';
 
 const SuggestionSort = (props) => {
+  const sortedProductRequestsArray = '';
+
   return (
     <Card classes={classes.sort}>
       <IconSuggestion />
       <p className={classes.sort__count}>
-        <span>0</span> Suggestions
+        <span>{props.productRequestsArray.length}</span> Suggestions
       </p>
       <label htmlFor="sort">Sort by : </label>
       <select id="sort">

@@ -13,6 +13,13 @@ const suggestionSlice = createSlice({
     removeComment(state, action) {
       // Some code used to update state
     },
+    upvote(state, action) {
+      state.productRequests.forEach((request, index, arr) => {
+        if (request.id === action.payload) {
+          request.upvotes += 1;
+        }
+      });
+    },
   },
 });
 

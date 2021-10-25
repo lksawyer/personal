@@ -1,10 +1,10 @@
-import classes from './CategoryItem.module.css';
-import { categoryActions } from '../../store/category';
 import { useDispatch } from 'react-redux';
+import { categoryActions } from '../../store/category';
+import classes from './CategoryItem.module.css';
 
 const CategoryItem = (props) => {
   const dispatch = useDispatch();
-  const clickHandler = (event) => {
+  const activeCategoryHandler = (event) => {
     dispatch(categoryActions.updateActive(event.target.innerText));
   };
 
@@ -12,7 +12,7 @@ const CategoryItem = (props) => {
     <li className={classes.category}>
       <button
         className={props.category === props.active ? classes.active : ''}
-        onClick={clickHandler}
+        onClick={activeCategoryHandler}
       >
         {props.category}
       </button>
