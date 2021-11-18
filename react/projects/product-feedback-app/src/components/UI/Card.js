@@ -5,7 +5,11 @@ const Card = (props) => {
     ? `${classes.card} ${props.classes}`
     : classes.card;
 
-  return <div className={combinedClasses}>{props.children}</div>;
+  return (
+    <div className={combinedClasses} onClick={props.onClick}>
+      {props.children}
+    </div>
+  );
 };
 
 export default Card;

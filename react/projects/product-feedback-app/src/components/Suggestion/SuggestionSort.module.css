@@ -22,31 +22,52 @@
   padding-right: 2.375rem;
 }
 
-.sort label {
+.sort__options {
+  position: relative;
+}
+
+.sort__label button {
+  font-family: 'Jost', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 0.875rem;
-  line-height: 1.25;
+  line-height: 1.25rem;
   color: #f2f4fe;
-}
-
-.sort select {
+  cursor: pointer;
+  background: transparent;
   border: none;
-  background-color: transparent;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 0.875rem;
-  line-height: 1.25;
-  color: #f2f4fe;
 }
 
-.sort select option {
+.sort__label button + svg path {
+  stroke: #ffffff;
+}
+
+.sort__container {
+  position: absolute;
+  z-index: 1;
+  background: #ffffff;
+  box-shadow: 0px 10px 40px -7px rgba(55, 63, 104, 0.350492);
+  border-radius: 10px;
+  width: 255px;
+  top: 55px;
+}
+
+.sort__list {
+}
+
+.sort__item {
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid rgba(58, 67, 116, 0.15);
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 1rem;
+  line-height: 1.438rem;
   color: #647196;
-  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.sort__item:hover {
+  color: #ad1fea;
 }
 
 .sort__button {
