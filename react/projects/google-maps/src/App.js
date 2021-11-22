@@ -1,5 +1,11 @@
+import GoogleMap from './Components/GoogleMap';
+
 function App() {
-  return <div>Hello World!</div>;
+  return (
+    <>
+      <GoogleMap />
+    </>
+  );
 }
 
 export default App;
