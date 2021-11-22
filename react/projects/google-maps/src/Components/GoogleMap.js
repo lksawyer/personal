@@ -1,4 +1,5 @@
 import useExternalScript from '../Hooks/use-External-Script';
+import LocalRetailer from './LocalRetailer';
 import Map from './Map';
 
 export const GoogleMap = () => {
@@ -11,6 +12,9 @@ export const GoogleMap = () => {
   if (googleMapsScriptStatus === 'error') return 'Error loading google map';
   if (googleMapsScriptStatus === 'loading') return 'Loading Maps';
 
+  // Obj of map options
+  const mapOptions = { center: { lat: 42.3601, lng: -71.0589 }, zoom: 8 };
+
   // Array of marker options
   const markerOptionsArray = [
     {
@@ -18,7 +22,11 @@ export const GoogleMap = () => {
       label: '1',
       content: '1st Pin',
     },
-    { latLng: { lat: 42.8584, lng: -70.93 }, label: '2', content: '2nd Pin' },
+    {
+      latLng: { lat: 42.8584, lng: -70.93 },
+      label: '2',
+      content: '2nd Pin',
+    },
     {
       latLng: { lat: 42.7762, lng: -71.0773 },
       label: '3',
@@ -30,9 +38,18 @@ export const GoogleMap = () => {
     <div>
       <Map
         mapID="map"
-        mapOptions={{ center: { lat: 42.3601, lng: -71.0589 }, zoom: 8 }}
+        mapOptions={mapOptions}
         markerOptionsArray={markerOptionsArray}
       />
+      {markerOptionsArray.map((retailer) => {
+        return (
+          <LocalRetailer
+            latLng={retailer.latLng}
+            label={retailer.label}
+            content={retailer.content}
+          />
+        );
+      })}
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { MarkerClusterer } from '@googlemaps/markerclusterer';
 import { useEffect } from 'react';
 
 const Map = (props) => {
-  const initMap = (markerOptionsArray) => {
+  useEffect(() => {
     // New Map
     const map = new window.google.maps.Map(
       document.getElementById(props.mapID),
@@ -47,19 +47,16 @@ const Map = (props) => {
     // Loop through markerOptionsArray
     // - create marker for each markerOptionsArray item
     // - add marker to markers array
-    let markers = [];
-    markerOptionsArray.forEach((element, i) => {
-      markers.push(addMarker(markerOptionsArray[i]));
+    const markers = [];
+    props.markerOptionsArray.forEach((element, i) => {
+      markers.push(addMarker(props.markerOptionsArray[i]));
     });
 
     // Add a marker clusterer to manage the markers.
     new MarkerClusterer({ markers, map });
-  };
 
-  useEffect(() => {
-    console.log('Inside Map.js: Calling initMap()');
-    initMap(props.markerOptionsArray);
-  }, [props.markerOptionsArray]);
+    console.log(markers);
+  }, [props.mapID, props.mapOptions, props.markerOptionsArray]);
 
   return <div id={props.mapID} style={{ width: 500, height: 500 }}></div>;
 };
