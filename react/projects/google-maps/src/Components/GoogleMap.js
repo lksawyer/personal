@@ -28,7 +28,11 @@ export const GoogleMap = () => {
 
   return (
     <div>
-      <Map markerOptionsArray={markerOptionsArray} />
+      <Map
+        mapID="map"
+        mapOptions={{ center: { lat: 42.3601, lng: -71.0589 }, zoom: 8 }}
+        markerOptionsArray={markerOptionsArray}
+      />
     </div>
   );
 };

@@ -3,16 +3,10 @@ import { useEffect } from 'react';
 
 const Map = (props) => {
   const initMap = (markerOptionsArray) => {
-    // Map options
-    const mapOptions = {
-      center: { lat: 42.3601, lng: -71.0589 },
-      zoom: 8,
-    };
-
     // New Map
     const map = new window.google.maps.Map(
-      document.getElementById('map'),
-      mapOptions
+      document.getElementById(props.mapID),
+      props.mapOptions
     );
 
     // Info window
@@ -67,7 +61,7 @@ const Map = (props) => {
     initMap(props.markerOptionsArray);
   }, [props.markerOptionsArray]);
 
-  return <div id="map" style={{ width: 500, height: 500 }}></div>;
+  return <div id={props.mapID} style={{ width: 500, height: 500 }}></div>;
 };
 
 export default Map;
