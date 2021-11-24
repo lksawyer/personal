@@ -2,6 +2,7 @@ import {
   GoogleMap,
   InfoWindow,
   Marker,
+  MarkerClusterer,
   useLoadScript,
 } from '@react-google-maps/api';
 import { useCallback, useRef, useState } from 'react';
@@ -97,19 +98,25 @@ function App() {
         options={mapOptions}
         onLoad={onMapLoad}
       >
-        {markers.map((marker, i) => {
-          return (
-            <Marker
-              key={i}
-              label={(i + 1).toString()}
-              position={{ lat: marker.lat, lng: marker.lng }}
-              onClick={() => {
-                setSelectedMarker(marker);
-                panTo({ lat: marker.lat, lng: marker.lng });
-              }}
-            />
-          );
-        })}
+        <MarkerClusterer>
+          {(clusterer) =>
+            markers.map((marker, i) => {
+              return (
+                <Marker
+                  clusterer={clusterer}
+                  key={i}
+                  label={(i + 1).toString()}
+                  position={{ lat: marker.lat, lng: marker.lng }}
+                  onClick={() => {
+                    setSelectedMarker(marker);
+                    panTo({ lat: marker.lat, lng: marker.lng });
+                  }}
+                />
+              );
+            })
+          }
+        </MarkerClusterer>
+
         {selectedMarker ? (
           <InfoWindow
             position={{ lat: selectedMarker.lat, lng: selectedMarker.lng }}
@@ -125,6 +132,7 @@ function App() {
           </InfoWindow>
         ) : null}
       </GoogleMap>
+
       {markers.map((marker, i) => {
         return (
           <LocalRetailer
