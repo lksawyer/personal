@@ -9,6 +9,7 @@ import { useCallback, useRef, useState } from 'react';
 import './App.css';
 import InfoWindowContent from './components/InfoWindowContent';
 import LocalRetailer from './components/LocalRetailer';
+import config from './config.json';
 
 // Temp holder for maker data
 const DUMMY_MARKERS = [
@@ -30,27 +31,38 @@ const DUMMY_MARKERS = [
 ];
 
 // Additional libraries that need to be loaded with useLoadScript
-const libraries = ['places'];
+// - ex: places
+const libraries = [''];
 
 // Styles for map container
 // - mainly for setting dimensions of map container so map will be visible
+// - this will likely be handled in a layout component
 const mapContainerStyle = {
   width: '500px',
   height: '500px',
 };
 
+// **************** config Variables
+
 // Center prop for map
-const center = {
-  lat: 35.779591,
-  lng: -78.638176,
+
+let mapCenter = {
+  lat: config.googleMap.mapCenter.lat,
+  lng: config.googleMap.mapCenter.lng,
 };
 
 // Options prop for map
 const mapOptions = {
-  disableDefaultUI: true,
-  zoomControl: true,
-  fullscreenControl: true,
+  disableDefaultUI: config.googleMap.mapOptions.disableDefaultUI,
+  zoomControl: config.googleMap.mapOptions.zoomControl,
+  fullscreenControl: config.googleMap.mapOptions.fullscreenControl,
 };
+
+const zoom = config.googleMap.zoom;
+
+const markerZoom = config.googleMap.markerZoom;
+
+// **************** config Variables
 
 function App() {
   // Script loader
@@ -73,14 +85,22 @@ function App() {
   // - useCallback prevents this action from running again when component re-renders
   const onMapLoad = useCallback((map) => {
     mapRef.current = map;
+    if (config.googleMap.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        mapRef.current.setCenter({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        });
+      });
+    }
   }, []);
 
   // Define map pan functionality
   // - useCallback prevents this action from running again when component re-renders
   const panTo = useCallback(({ lat, lng }) => {
     mapRef.current.panTo({ lat, lng });
-    if (mapRef.current.zoom !== 10) {
-      mapRef.current.setZoom(10);
+    if (mapRef.current.zoom !== markerZoom) {
+      mapRef.current.setZoom(markerZoom);
     }
   }, []);
 
@@ -93,8 +113,8 @@ function App() {
     <div>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
-        zoom={8}
-        center={center}
+        zoom={zoom}
+        center={mapCenter}
         options={mapOptions}
         onLoad={onMapLoad}
       >
