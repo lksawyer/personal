@@ -1,0 +1,16 @@
+{
+  "googleMap": {
+    "center": {
+      "lat": 35.779591,
+      "lng": -78.638176
+    },
+    "options": {
+      "disableDefaultUI": true,
+      "zoomControl": true,
+      "fullscreenControl": true
+    },
+    "zoom": 8,
+    "clickedZoom": 10,
+    "geolocation": false
+  }
+}

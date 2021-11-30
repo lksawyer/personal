@@ -1,57 +1,74 @@
-import useExternalScript from '../Hooks/use-External-Script';
-import LocalRetailer from './LocalRetailer';
-import Map from './Map';
+import { useEffect, useRef } from 'react';
 
-export const GoogleMap = () => {
-  // Google Maps JS Script
-  const baseGoogleMapURL = 'https://maps.googleapis.com/maps/api/js';
-  const googleMapsAPIKey = '?key=' + process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-  const googleMapsScript = baseGoogleMapURL + googleMapsAPIKey;
-  const googleMapsScriptStatus = useExternalScript(googleMapsScript, 'defer');
+const GoogleMap = ({
+  center,
+  id,
+  localRetailers,
+  onLoad,
+  zoom,
+  setSelectedMarker,
+  selectedMarker,
+}) => {
+  // Refs
+  const mapRef = useRef();
+  const infoWindowRef = useRef();
 
-  if (googleMapsScriptStatus === 'error') return 'Error loading google map';
-  if (googleMapsScriptStatus === 'loading') return 'Loading Maps';
+  // Google Map
+  useEffect(() => {
+    console.log('New google map object');
+    const map = new window.google.maps.Map(document.getElementById('map'), {
+      center: { lat: center.lat, lng: center.lng },
+      zoom: zoom,
+    });
+    mapRef.current = map;
+    infoWindowRef.current = new window.google.maps.InfoWindow({
+      content: '',
+    });
+    infoWindowRef.current.addListener('closeclick', () => {
+      console.log('closing');
+      setSelectedMarker(null);
+    });
+    onLoad(map);
+  }, [center.lat, center.lng, onLoad, setSelectedMarker, zoom]);
 
-  // Obj of map options
-  const mapOptions = { center: { lat: 42.3601, lng: -71.0589 }, zoom: 8 };
+  //Info Window
+  useEffect(() => {
+    console.log('Updating infoWindowRef');
+    console.log('selectedMarker: ', selectedMarker);
 
-  // Array of marker options
-  const markerOptionsArray = [
-    {
-      latLng: { lat: 42.4668, lng: -70.9495 },
-      label: '1',
-      content: '1st Pin',
-    },
-    {
-      latLng: { lat: 42.8584, lng: -70.93 },
-      label: '2',
-      content: '2nd Pin',
-    },
-    {
-      latLng: { lat: 42.7762, lng: -71.0773 },
-      label: '3',
-      content: '3rd Pin',
-    },
-  ];
+    if (selectedMarker) {
+      infoWindowRef.current.setContent(selectedMarker.name);
+      infoWindowRef.current.setPosition({
+        lat: selectedMarker.lat,
+        lng: selectedMarker.lng,
+      });
+      infoWindowRef.current.open({
+        map: mapRef.current,
+        shouldFocus: false,
+      });
+    }
+  }, [selectedMarker]);
 
-  return (
-    <div>
-      <Map
-        mapID="map"
-        mapOptions={mapOptions}
-        markerOptionsArray={markerOptionsArray}
-      />
-      {markerOptionsArray.map((retailer) => {
-        return (
-          <LocalRetailer
-            latLng={retailer.latLng}
-            label={retailer.label}
-            content={retailer.content}
-          />
-        );
-      })}
-    </div>
-  );
+  // Markers
+  useEffect(() => {
+    if (mapRef.current) {
+      console.log('New marker objects');
+      localRetailers.map((retailer) => {
+        const marker = new window.google.maps.Marker({
+          position: { lat: retailer.lat, lng: retailer.lng },
+          map: mapRef.current,
+        });
+
+        marker.addListener('click', () => {
+          setSelectedMarker(retailer);
+        });
+
+        return null;
+      });
+    }
+  }, [localRetailers, setSelectedMarker]);
+
+  return <div id={id} style={{ width: 500, height: 500 }}></div>;
 };
 
 export default GoogleMap;

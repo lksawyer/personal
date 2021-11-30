@@ -1,9 +1,9 @@
-import GoogleMap from './Components/GoogleMap';
+import Local from './Components/Local';
 
 function App() {
   return (
     <>
-      <GoogleMap />
+      <Local />
     </>
   );
 }
