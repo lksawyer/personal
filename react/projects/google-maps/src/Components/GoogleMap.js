@@ -8,14 +8,13 @@ const fillColor = config.googleMap.marker.fillColor;
 
 // Component
 const GoogleMap = ({
-  center,
   id,
   localRetailers,
   onLoad,
+  options,
   panTo,
   selectedOffer,
   setSelectedOffer,
-  zoom,
 }) => {
   // Refs
   const mapRef = useRef();
@@ -25,8 +24,11 @@ const GoogleMap = ({
   useEffect(() => {
     console.log('New google map object');
     const map = new window.google.maps.Map(document.getElementById('map'), {
-      center: { lat: center.lat, lng: center.lng },
-      zoom: zoom,
+      center: { lat: options.center.lat, lng: options.center.lng },
+      disableDefaultUI: options.disableDefaultUI,
+      fullscreenControl: options.fullscreenControl,
+      zoom: options.zoom,
+      zoomControl: options.zoomControl,
     });
     mapRef.current = map;
     infoWindowRef.current = new window.google.maps.InfoWindow({
@@ -37,7 +39,16 @@ const GoogleMap = ({
       setSelectedOffer(null);
     });
     onLoad(map);
-  }, [center.lat, center.lng, onLoad, setSelectedOffer, zoom]);
+  }, [
+    onLoad,
+    options.center.lat,
+    options.center.lng,
+    options.disableDefaultUI,
+    options.fullscreenControl,
+    options.zoom,
+    options.zoomControl,
+    setSelectedOffer,
+  ]);
 
   // Info Window
   useEffect(() => {

@@ -23,18 +23,18 @@ const DUMMY_OFFERS = [
 ];
 
 // Config
-let center = {
-  lat: config.googleMap.center.lat,
-  lng: config.googleMap.center.lng,
-};
 const clickedZoom = config.googleMap.clickedZoom;
 const geolocation = config.googleMap.geolocation;
 const options = {
+  center: {
+    lat: config.googleMap.options.center.lat,
+    lng: config.googleMap.options.center.lng,
+  },
   disableDefaultUI: config.googleMap.options.disableDefaultUI,
-  zoomControl: config.googleMap.options.zoomControl,
   fullscreenControl: config.googleMap.options.fullscreenControl,
+  zoom: config.googleMap.options.zoom,
+  zoomControl: config.googleMap.options.zoomControl,
 };
-const zoom = config.googleMap.zoom;
 
 // Component
 const Local = () => {
@@ -77,7 +77,6 @@ const Local = () => {
   return (
     <>
       <GoogleMap
-        center={center}
         id="map"
         localRetailers={offers}
         onLoad={onMapLoad}
@@ -85,7 +84,6 @@ const Local = () => {
         panTo={panTo}
         selectedOffer={selectedOffer}
         setSelectedOffer={setSelectedOffer}
-        zoom={zoom}
       ></GoogleMap>
     </>
   );

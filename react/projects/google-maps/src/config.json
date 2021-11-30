@@ -1,9 +1,5 @@
 {
   "googleMap": {
-    "center": {
-      "lat": 36.072636,
-      "lng": -79.791977
-    },
     "clickedZoom": 10,
     "geolocation": true,
     "marker": {
@@ -11,10 +7,14 @@
       "fillColor": "#000000"
     },
     "options": {
+      "center": {
+        "lat": 36.072636,
+        "lng": -79.791977
+      },
       "disableDefaultUI": true,
-      "zoomControl": true,
-      "fullscreenControl": true
-    },
-    "zoom": 8
+      "fullscreenControl": true,
+      "zoom": 8,
+      "zoomControl": true
+    }
   }
 }
