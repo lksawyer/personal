@@ -3,12 +3,17 @@ import { useState } from "react";
 
 const Container = ({ children }) => {
   // State
-  const [daytimeState, setDaytimeState] = useState(true);
+
+  const [periodOfDay, setPeriodOfDay] = useState({
+    morning: false,
+    afternoon: false,
+    evening: true
+  });
 
   return (
     <div
       className={
-        daytimeState
+        periodOfDay.morning || periodOfDay.afternoon
           ? `${classes.Container} ${classes["Container--daytime"]}`
           : `${classes.Container} ${classes["Container--nighttime"]}`
       }

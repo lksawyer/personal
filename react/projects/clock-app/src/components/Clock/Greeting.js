@@ -6,9 +6,9 @@ import classes from "./Greeting.module.css";
 const Greeting = () => {
   // State
   const [periodOfDay, setPeriodOfDay] = useState({
-    morning: true,
+    morning: false,
     afternoon: false,
-    evening: false
+    evening: true
   });
 
   return (
