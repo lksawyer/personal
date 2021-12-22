@@ -1,0 +1,44 @@
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default */
+
+.Location {
+}
+
+.Location__content {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.938rem;
+  line-height: 1.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.Location__city {
+}
+
+.Location__country {
+}
+
+/*Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .Location__content {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: 3.6px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .Location__content {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 4.8px;
+  }
+}

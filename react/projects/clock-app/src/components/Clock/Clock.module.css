@@ -1,0 +1,28 @@
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default */
+
+.Clock {
+}
+
+.Clock__greeting {
+  margin-bottom: 1rem;
+}
+
+.Clock__time {
+  margin-bottom: 1rem;
+}
+
+.Clock__location {
+}
+
+/*Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
