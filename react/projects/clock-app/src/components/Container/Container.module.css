@@ -11,9 +11,6 @@
   background-attachment: fixed;
   background-size: cover;
   z-index: -2;
-}
-
-.Container--daytime {
   background-image: url(../../assets/mobile/bg-image-daytime.jpg);
 }
 
@@ -39,7 +36,7 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .Container--daytime {
+  .Container {
     background-image: url(../../assets/tablet/bg-image-daytime.jpg);
   }
 
@@ -53,7 +50,7 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .Container--daytime {
+  .Container {
     background-image: url(../../assets/desktop/bg-image-daytime.jpg);
   }
 

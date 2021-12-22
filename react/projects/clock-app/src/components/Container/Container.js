@@ -14,7 +14,7 @@ const Container = ({ children }) => {
     <div
       className={
         periodOfDay.morning || periodOfDay.afternoon
-          ? `${classes.Container} ${classes["Container--daytime"]}`
+          ? `${classes.Container}`
           : `${classes.Container} ${classes["Container--nighttime"]}`
       }
     >
