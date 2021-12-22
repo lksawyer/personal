@@ -1,11 +1,12 @@
-import Background from "./components/Background/Background";
+import Container from "./components/Container/Container";
+import Quote from "./components/Quote/Quote";
 
 function App() {
   return (
     <>
-      <Background>
-        <p>Hello World</p>
-      </Background>
+      <Container>
+        <Quote />
+      </Container>
     </>
   );
 }

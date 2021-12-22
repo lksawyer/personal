@@ -1,0 +1,55 @@
+/* X-Small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default */
+
+.Quote {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Quote__text {
+  flex: 0 0 90%;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  color: #ffffff;
+}
+
+.Quote__refresh {
+  flex: 0 0 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.Quote__citation {
+  margin-top: 0.5rem;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0.75rem;
+  line-height: 1.375rem;
+  color: #ffffff;
+}
+
+/*Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .Quote__text {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .Quote__citation {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}

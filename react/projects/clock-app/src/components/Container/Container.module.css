@@ -1,7 +1,7 @@
 /* X-Small devices (portrait phones, less than 576px) */
 /* No media query for `xs` since this is the default */
 
-.background {
+.Container {
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -10,15 +10,28 @@
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
-  padding: 1.875rem 1.563rem;
+  z-index: -2;
 }
 
-.background.daytime {
+.Container--daytime {
   background-image: url(../../assets/mobile/bg-image-daytime.jpg);
 }
 
-.background.nighttime {
+.Container--nighttime {
   background-image: url(../../assets/mobile/bg-image-nighttime.jpg);
+}
+
+.Container__overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #000000;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.Container__content {
+  padding: 1.875rem 1.563rem;
 }
 
 /*Small devices (landscape phones, 576px and up) */
@@ -27,28 +40,30 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .background {
-    padding: 5rem 4.063rem;
-  }
-  .background.daytime {
+  .Container--daytime {
     background-image: url(../../assets/tablet/bg-image-daytime.jpg);
   }
 
-  .background.nighttime {
+  .Container--nighttime {
     background-image: url(../../assets/tablet/bg-image-nighttime.jpg);
+  }
+
+  .Container__content {
+    padding: 5rem 4.063rem;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .background {
-    padding: 3.438rem 10.313rem;
-  }
-  .background.daytime {
+  .Container--daytime {
     background-image: url(../../assets/desktop/bg-image-daytime.jpg);
   }
 
-  .background.nighttime {
+  .Container--nighttime {
     background-image: url(../../assets/desktop/bg-image-nighttime.jpg);
+  }
+
+  .Container__content {
+    padding: 3.438rem 10.313rem;
   }
 }
