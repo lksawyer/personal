@@ -1,7 +1,13 @@
-import "./App.css";
+import Background from "./components/Background/Background";
 
 function App() {
-  return <p>Hello World</p>;
+  return (
+    <>
+      <Background>
+        <p>Hello World</p>
+      </Background>
+    </>
+  );
 }
 
 export default App;
