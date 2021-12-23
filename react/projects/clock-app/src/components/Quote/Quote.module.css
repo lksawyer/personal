@@ -5,7 +5,8 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 1.5rem;
+  padding: 24px;
+  width: 100%;
 }
 
 .Quote__text {
@@ -13,8 +14,8 @@
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.75rem;
-  line-height: 1.375rem;
+  font-size: 12px;
+  line-height: 22px;
   color: #ffffff;
 }
 
@@ -29,31 +30,29 @@
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
-  font-size: 0.75rem;
-  line-height: 1.375rem;
+  font-size: 12px;
+  line-height: 22px;
   color: #ffffff;
 }
 
 /*Tablets,  Less than 769px*/
 @media (min-width: 376px) {
-  .Quote {
-    padding: 4rem;
-  }
-
   .Quote__text {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 18px;
+    line-height: 28px;
   }
 
   .Quote__citation {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 
 /* Desktop, 769px and up */
 @media (min-width: 769px) {
   .Quote {
-    padding: 4rem 5rem;
+    width: 90%;
+    max-width: 608px; /* This is  ammagic # from current width of .Clock__content + 128px from .Quote padding. Should build out a more robust solution in the future for this alignment */
+    padding: 64px;
   }
 }

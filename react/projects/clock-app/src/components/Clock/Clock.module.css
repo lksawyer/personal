@@ -4,11 +4,11 @@
 .Clock {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 24px;
 }
 
 .Clock__content {
-  margin-bottom: 3.75rem;
+  margin-bottom: 48px;
 }
 
 .Clock__button {
@@ -16,12 +16,8 @@
 
 /*Tablets,  Less than 769px*/
 @media (min-width: 376px) {
-  .Clock {
-    padding: 4rem;
-  }
-
   .Clock__content {
-    margin-bottom: 4rem;
+    margin-bottom: 80px;
   }
 }
 
@@ -31,10 +27,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 4rem 5rem;
+    padding: 64px;
   }
 
   .Clock__content {
-    margin-bottom: 0rem;
+    margin-bottom: 0px;
   }
 }

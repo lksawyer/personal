@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Layout = ({ children }) => {
   // State
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
 
   return (
     <div className={classes.Layout}>

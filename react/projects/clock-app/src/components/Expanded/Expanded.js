@@ -25,7 +25,7 @@ const Expanded = () => {
               : `${classes.Expanded__item} ${classes["Expanded__item--nighttime"]}`
           }
         >
-          Current Timezone
+          Timezone
           <span
             className={
               periodOfDay.morning || periodOfDay.afternoon

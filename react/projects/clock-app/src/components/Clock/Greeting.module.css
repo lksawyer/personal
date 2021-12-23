@@ -13,8 +13,8 @@
   font-family: Inter;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.938rem;
-  line-height: 1.563rem;
+  font-size: 15px;
+  line-height: 25px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #ffffff;
@@ -28,8 +28,10 @@
 @media (min-width: 376px) {
   .Greeting__msg {
     display: block;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    /* font-size: 18px; mockup */
+    /* Review later: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
+    font-size: 11px; /* value that works at 37spx vw */
+    line-height: 28px;
     letter-spacing: 3.6px;
   }
 
@@ -41,8 +43,8 @@
 /* Desktop, 769px and up */
 @media (min-width: 769px) {
   .Greeting__msg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: 20px;
+    line-height: 28px;
     letter-spacing: 4px;
   }
 }
