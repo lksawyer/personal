@@ -36,13 +36,13 @@ img {
 
 /* Breakpoints */
 
-/* X-Small devices (portrait phones, less than 576px) */
-/* No media query for `xs` since this is the default */
+/* Mobile devices, less than 376px */
+/* No media query for mobile since this is the default */
 
-/*Small devices and tablets (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+/*Tablets,  Less than 769px*/
+@media (min-width: 376px) {
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+/* Desktop, 769px and up */
+@media (min-width: 769px) {
 }

@@ -1,5 +1,5 @@
-/* X-Small devices (portrait phones, less than 576px) */
-/* No media query for `xs` since this is the default */
+/* Mobile devices, less than 376px */
+/* No media query for mobile since this is the default */
 
 .Clock {
   display: flex;
@@ -14,8 +14,8 @@
 .Clock__button {
 }
 
-/*Small devices and tablets (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+/*Tablets,  Less than 769px*/
+@media (min-width: 376px) {
   .Clock {
     padding: 4rem;
   }
@@ -25,8 +25,8 @@
   }
 }
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+/* Desktop, 769px and up */
+@media (min-width: 769px) {
   .Clock {
     flex-direction: row;
     justify-content: space-between;

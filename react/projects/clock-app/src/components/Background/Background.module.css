@@ -1,6 +1,5 @@
-/* X-Small devices (portrait phones, less than 576px) */
-/* No media query for `xs` since this is the default */
-
+/* Mobile devices, less than 376px */
+/* No media query for mobile since this is the default */
 .Background {
   position: absolute;
   height: 100vh;
@@ -26,12 +25,8 @@
   z-index: -1;
 }
 
-/*Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+/*Tablets,  Less than 769px*/
+@media (min-width: 376px) {
   .Background {
     background-image: url(../../assets/tablet/bg-image-daytime.jpg);
   }
@@ -39,21 +34,17 @@
   .Background--nighttime {
     background-image: url(../../assets/tablet/bg-image-nighttime.jpg);
   }
-
-  .Background__content {
-  }
 }
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
+
+/* Desktop, 769px and up */
+@media (min-width: 769px) {
   .Background {
     background-image: url(../../assets/desktop/bg-image-daytime.jpg);
   }
 
   .Background--nighttime {
     background-image: url(../../assets/desktop/bg-image-nighttime.jpg);
-  }
-
-  .Background__content {
   }
 }
