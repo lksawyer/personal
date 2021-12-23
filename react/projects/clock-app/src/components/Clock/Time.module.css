@@ -27,12 +27,8 @@
   color: #ffffff;
 }
 
-/*Small devices (landscape phones, 576px and up) */
+/*Small devices and tablets (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
   .Time__hoursMin {
     font-size: 10.938rem;
     line-height: 10.938rem;

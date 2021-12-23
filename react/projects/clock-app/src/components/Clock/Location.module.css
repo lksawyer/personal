@@ -21,12 +21,8 @@
 .Location__country {
 }
 
-/*Small devices (landscape phones, 576px and up) */
+/*Small devices and tablets (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
   .Location__content {
     font-size: 1.125rem;
     line-height: 1.75rem;

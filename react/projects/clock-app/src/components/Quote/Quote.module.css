@@ -34,12 +34,9 @@
   color: #ffffff;
 }
 
-/*Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
+/*Small devices and tablets (landscape phones, 576px and up) */
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .Quote {
     padding: 4rem;
   }

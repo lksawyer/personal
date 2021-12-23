@@ -25,12 +25,8 @@
   display: block;
 }
 
-/*Small devices (landscape phones, 576px and up) */
+/*Small devices and tablets (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
   .Greeting__msg {
     display: block;
     font-size: 1.125rem;
