@@ -8,8 +8,9 @@
   padding: 0.25rem 0.25rem 0.25rem 1rem;
   border-radius: 28px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 120px;
 }
 
 .Button__text {
@@ -35,6 +36,10 @@
   background-color: #303030;
 }
 
+.Button__circle--expanded {
+  transform: rotate(180deg);
+}
+
 /*Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }
@@ -44,6 +49,7 @@
   .Button {
     padding: 0.5rem 0.5rem 0.5rem 1.75rem;
     border-radius: 28px;
+    width: 160px;
   }
 
   .Button__text {

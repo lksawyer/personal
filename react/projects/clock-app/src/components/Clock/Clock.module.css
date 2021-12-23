@@ -2,17 +2,16 @@
 /* No media query for `xs` since this is the default */
 
 .Clock {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
 }
 
-.Clock__greeting {
-  margin-bottom: 1rem;
+.Clock__content {
+  margin-bottom: 3.75rem;
 }
 
-.Clock__time {
-  margin-bottom: 1rem;
-}
-
-.Clock__location {
+.Clock__button {
 }
 
 /*Small devices (landscape phones, 576px and up) */
@@ -21,8 +20,25 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .Clock {
+    padding: 4rem;
+  }
+
+  .Clock__content {
+    margin-bottom: 4rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .Clock {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 4rem 5rem;
+  }
+
+  .Clock__content {
+    margin-bottom: 0rem;
+  }
 }

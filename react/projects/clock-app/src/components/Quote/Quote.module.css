@@ -5,6 +5,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  padding: 1.5rem;
 }
 
 .Quote__text {
@@ -39,6 +40,10 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .Quote {
+    padding: 4rem;
+  }
+
   .Quote__text {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -52,4 +57,7 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .Quote {
+    padding: 4rem 5rem;
+  }
 }

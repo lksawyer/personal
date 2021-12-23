@@ -1,0 +1,23 @@
+.Layout {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.Layout__section {
+  position: static;
+}
+
+.Layout__section--moveUp {
+  position: absolute;
+  top: 100%;
+}
+
+.Layout__section--moveDown {
+  position: absolute;
+  bottom: 100%;
+}

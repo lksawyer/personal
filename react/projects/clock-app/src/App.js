@@ -1,18 +1,18 @@
-import Container from "./components/Container/Container";
+import Background from "./components/Background/Background";
 import Quote from "./components/Quote/Quote";
 import Clock from "./components/Clock/Clock";
-import Button from "./components/Button/Button";
 import Expanded from "./components/Expanded/Expanded";
+import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
     <>
-      <Container>
+      <Background />
+      <Layout>
         <Quote />
         <Clock />
-        <Button />
         <Expanded />
-      </Container>
+      </Layout>
     </>
   );
 }
