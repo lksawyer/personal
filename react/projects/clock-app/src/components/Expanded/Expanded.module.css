@@ -1,4 +1,4 @@
-/* Mobile devices, less than 376px */
+/* Mobile devices, less than 768px */
 /* No media query for mobile since this is the default */
 .Expanded {
   background-color: rgba(255, 255, 255, 0.85);
@@ -15,7 +15,7 @@
 .Expanded__item {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 16px;
+  padding-bottom: 16px;
   align-items: center;
   font-family: Inter;
   font-style: normal;
@@ -25,6 +25,10 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #303030;
+}
+
+.Expanded__item:nth-child(4) {
+  padding-bottom: 0;
 }
 
 .Expanded__item--nighttime {
@@ -44,8 +48,8 @@
   color: #ffffff;
 }
 
-/*Tablets,  Less than 769px*/
-@media (min-width: 376px) {
+/* Tablets, 768px and up */
+@media (min-width: 768px) {
   .Expanded__list {
     display: flex;
     flex-wrap: wrap;
@@ -55,10 +59,18 @@
     flex: 0 0 50%;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 48px;
+    padding-bottom: 48px;
     font-size: 13px;
     line-height: 28px;
     letter-spacing: 2.6px;
+  }
+
+  .Expanded__item:nth-child(3) {
+    padding-bottom: 0;
+  }
+
+  .Expanded__item:nth-child(4) {
+    padding-bottom: 0;
   }
 
   .Expanded__value {
@@ -67,17 +79,22 @@
   }
 }
 
-/* Desktop, 769px and up */
-@media (min-width: 769px) {
+/* Desktop, 1440px and up  */
+@media (min-width: 1440px) {
   .Expanded {
     padding: 64px;
   }
 
   .Expanded__item {
-    margin-bottom: 42px;
+    padding-bottom: 42px;
     font-size: 15px;
     line-height: 28px;
     letter-spacing: 3px;
+  }
+
+  .Expanded__item--nighttime:nth-child(even) {
+    border-left: 1px solid rgb(255, 255, 255, 0.2);
+    padding-left: 64px;
   }
 
   .Expanded__value {

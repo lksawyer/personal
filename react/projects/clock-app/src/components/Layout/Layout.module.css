@@ -8,6 +8,10 @@
   overflow: hidden;
 }
 
+.Layout--expanded {
+  justify-content: flex-end;
+}
+
 .Layout__section {
   position: static;
 }

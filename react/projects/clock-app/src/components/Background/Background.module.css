@@ -1,4 +1,4 @@
-/* Mobile devices, less than 376px */
+/* Mobile devices, less than 768px */
 /* No media query for mobile since this is the default */
 .Background {
   position: absolute;
@@ -9,11 +9,13 @@
   background-attachment: fixed;
   background-size: cover;
   z-index: -2;
-  background-image: url(../../assets/mobile/bg-image-daytime.jpg);
+  /* background-image: url(../../assets/mobile/bg-image-daytime.jpg); */
+  background-image: url(../../assets/desktop/bg-image-daytime.jpg);
 }
 
 .Background--nighttime {
-  background-image: url(../../assets/mobile/bg-image-nighttime.jpg);
+  /* background-image: url(../../assets/mobile/bg-image-nighttime.jpg); */
+  background-image: url(../../assets/desktop/bg-image-nighttime.jpg);
 }
 
 .Background__overlay {
@@ -25,21 +27,21 @@
   z-index: -1;
 }
 
-/*Tablets,  Less than 769px*/
-@media (min-width: 376px) {
+/* Tablets, 768px and up */
+@media (min-width: 768px) {
   .Background {
-    background-image: url(../../assets/tablet/bg-image-daytime.jpg);
+    /* background-image: url(../../assets/tablet/bg-image-daytime.jpg); */
+    background-image: url(../../assets/desktop/bg-image-daytime.jpg);
   }
 
   .Background--nighttime {
-    background-image: url(../../assets/tablet/bg-image-nighttime.jpg);
+    /* background-image: url(../../assets/tablet/bg-image-nighttime.jpg); */
+    background-image: url(../../assets/desktop/bg-image-nighttime.jpg);
   }
 }
 
-/* Large devices (desktops, 992px and up) */
-
-/* Desktop, 769px and up */
-@media (min-width: 769px) {
+/* Desktop, 1440px and up  */
+@media (min-width: 1440px) {
   .Background {
     background-image: url(../../assets/desktop/bg-image-daytime.jpg);
   }

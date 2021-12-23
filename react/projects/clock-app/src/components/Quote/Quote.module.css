@@ -1,6 +1,5 @@
-/* Mobile devices, less than 376px */
+/* Mobile devices, less than 768px */
 /* No media query for mobile since this is the default */
-
 .Quote {
   width: 100%;
   display: flex;
@@ -35,8 +34,8 @@
   color: #ffffff;
 }
 
-/*Tablets,  Less than 769px*/
-@media (min-width: 376px) {
+/* Tablets, 768px and up */
+@media (min-width: 768px) {
   .Quote__text {
     font-size: 18px;
     line-height: 28px;
@@ -48,11 +47,9 @@
   }
 }
 
-/* Desktop, 769px and up */
-@media (min-width: 769px) {
+/* Desktop, 1440px and up  */
+@media (min-width: 1440px) {
   .Quote {
-    width: 90%;
-    max-width: 608px; /* This is  ammagic # from current width of .Clock__content + 128px from .Quote padding. Should build out a more robust solution in the future for this alignment */
     padding: 64px;
   }
 }

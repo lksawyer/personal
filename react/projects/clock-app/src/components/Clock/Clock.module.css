@@ -1,6 +1,5 @@
-/* Mobile devices, less than 376px */
+/* Mobile devices, less than 768px */
 /* No media query for mobile since this is the default */
-
 .Clock {
   display: flex;
   flex-direction: column;
@@ -14,15 +13,15 @@
 .Clock__button {
 }
 
-/*Tablets,  Less than 769px*/
-@media (min-width: 376px) {
+/* Tablets, 768px and up */
+@media (min-width: 768px) {
   .Clock__content {
     margin-bottom: 80px;
   }
 }
 
-/* Desktop, 769px and up */
-@media (min-width: 769px) {
+/* Desktop, 1440px and up  */
+@media (min-width: 1440px) {
   .Clock {
     flex-direction: row;
     justify-content: space-between;

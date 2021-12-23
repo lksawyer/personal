@@ -1,4 +1,4 @@
-/* Mobile devices, less than 376px */
+/* Mobile devices, less than 768px */
 /* No media query for mobile since this is the default */
 .Location {
 }
@@ -7,30 +7,26 @@
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
-  /* font-size: 15px; mockup */
-  font-size: 15px; /* to match gretting solution */
+  font-size: 15px;
   line-height: 28px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #ffffff;
 }
 
-/*Tablets,  Less than 769px*/
-@media (min-width: 376px) {
+/* Tablets, 768px and up */
+@media (min-width: 768px) {
   .Location__content {
-    /* font-size: 18px; mockup */
-    font-size: 11px; /* to match gretting solution */
-
+    font-size: 18px;
     line-height: 28px;
     letter-spacing: 3.6px;
   }
 }
 
-/* Desktop, 769px and up */
-@media (min-width: 769px) {
+/* Desktop, 1440px and up  */
+@media (min-width: 1440px) {
   .Location__content {
-    /* font-size: 24px; mockup */
-    font-size: 20px; /* to match gretting solution */
+    font-size: 24px;
     line-height: 28px;
     letter-spacing: 4.8px;
   }

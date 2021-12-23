@@ -1,4 +1,4 @@
-/* Mobile devices, less than 376px */
+/* Mobile devices, less than 768px */
 /* No media query for mobile since this is the default */
 .Time {
 }
@@ -10,9 +10,7 @@
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
-  /* font-size: 100px; mockup */
-  /* Review later: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-  font-size: 99px; /* value that works at 37spx vw */
+  font-size: 100px;
   line-height: 100px;
   letter-spacing: -2.5px;
   color: #ffffff;
@@ -28,38 +26,30 @@
   color: #ffffff;
 }
 
-/*Tablets,  Less than 769px*/
-@media (min-width: 376px) {
+/* Tablets, 768px and up */
+@media (min-width: 768px) {
   .Time__hoursMin {
-    /* font-size: 175px; mockup */
-    /* Review later: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-    font-size: 116px; /* value that works at 37spx vw */
+    font-size: 175px;
     line-height: 175px;
     letter-spacing: -4.38px;
   }
 
   .Time__timeZone {
-    /* font-size: 32px; mockup */
-    /* Review later: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-    font-size: 25px; /* value that works at 37spx vw */
+    font-size: 32px;
     line-height: 28px;
   }
 }
 
-/* Desktop, 769px and up */
-@media (min-width: 769px) {
+/* Desktop, 1440px and up  */
+@media (min-width: 1440px) {
   .Time__hoursMin {
-    /* font-size: 200px; mockup */
-    /* Review later: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-    font-size: 180px; /* value that works at 37spx vw */
+    font-size: 200px;
     line-height: 200px;
     letter-spacing: -5px;
   }
 
   .Time__timeZone {
-    /* font-size: 40px; mockup */
-    /* Review later: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-    font-size: 23px; /* value that works at 37spx vw */
+    font-size: 40px;
     line-height: 28px;
   }
 }

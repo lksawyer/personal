@@ -1,4 +1,4 @@
-/* Mobile devices, less than 376px */
+/* Mobile devices, less than 768px */
 /* No media query for mobile since this is the default */
 .Greeting {
   display: flex;
@@ -24,13 +24,11 @@
   display: block;
 }
 
-/*Tablets,  Less than 769px*/
-@media (min-width: 376px) {
+/* Tablets, 768px and up */
+@media (min-width: 768px) {
   .Greeting__msg {
     display: block;
-    /* font-size: 18px; mockup */
-    /* Review later: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
-    font-size: 11px; /* value that works at 37spx vw */
+    font-size: 18px; /* Review later: https://css-tricks.com/linearly-scale-font-size-with-css-clamp-based-on-the-viewport/ */
     line-height: 28px;
     letter-spacing: 3.6px;
   }
@@ -40,8 +38,8 @@
   }
 }
 
-/* Desktop, 769px and up */
-@media (min-width: 769px) {
+/* Desktop, 1440px and up  */
+@media (min-width: 1440px) {
   .Greeting__msg {
     font-size: 20px;
     line-height: 28px;
