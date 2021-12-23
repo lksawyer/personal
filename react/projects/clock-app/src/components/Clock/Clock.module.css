@@ -3,19 +3,13 @@
 .Clock {
   display: flex;
   flex-direction: column;
-  padding: 24px;
-}
-
-.Clock__content {
+  padding: 24px 24px 0 24px;
   margin-bottom: 48px;
-}
-
-.Clock__button {
 }
 
 /* Tablets, 768px and up */
 @media (min-width: 768px) {
-  .Clock__content {
+  .Clock {
     margin-bottom: 80px;
   }
 }
@@ -23,13 +17,7 @@
 /* Desktop, 1440px and up  */
 @media (min-width: 1440px) {
   .Clock {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 64px;
-  }
-
-  .Clock__content {
+    padding: 64px 64px 64px 64px;
     margin-bottom: 0px;
   }
 }
