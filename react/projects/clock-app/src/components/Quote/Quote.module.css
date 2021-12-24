@@ -22,6 +22,14 @@
   flex: 0 0 10%;
   display: flex;
   justify-content: center;
+  height: max-content;
+}
+
+.Quote__button {
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .Quote__citation {

@@ -11,7 +11,13 @@ const Quote = () => {
           value.”
         </p>
         <div className={classes.Quote__refresh}>
-          <IconRresh />
+          <button
+            type='button'
+            className={classes.Quote__button}
+            onClick={() => console.log("Refresh Clicked!")}
+          >
+            <IconRresh />
+          </button>
         </div>
         <p className={classes.Quote__citation}>Ada Lovelace</p>
       </div>
