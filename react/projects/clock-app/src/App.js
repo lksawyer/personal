@@ -12,6 +12,7 @@ function App() {
       <Layout>
         <Quote />
         <Clock />
+        <Button />
         <Expanded />
       </Layout>
     </>

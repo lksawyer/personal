@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 24px;
+  padding: 26px;
   width: 100%;
 }
 
@@ -36,6 +36,10 @@
 
 /* Tablets, 768px and up */
 @media (min-width: 768px) {
+  .Quote {
+    padding: 64px;
+  }
+
   .Quote__text {
     font-size: 18px;
     line-height: 28px;
@@ -50,6 +54,6 @@
 /* Desktop, 1440px and up  */
 @media (min-width: 1440px) {
   .Quote {
-    padding: 64px;
+    padding: 64px 0 64px 128px;
   }
 }

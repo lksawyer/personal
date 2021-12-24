@@ -5,9 +5,9 @@ const Background = () => {
   // State
 
   const [periodOfDay, setPeriodOfDay] = useState({
-    morning: false,
+    morning: true,
     afternoon: false,
-    evening: true
+    evening: false
   });
 
   return (

@@ -35,10 +35,6 @@ img {
   height: auto;
 }
 
-#root {
-  max-height: 800px;
-}
-
 /* Breakpoints */
 
 /* Mobile devices, less than 768px */

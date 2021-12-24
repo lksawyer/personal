@@ -16,21 +16,26 @@ const Layout = ({ children }) => {
       <div
         className={
           expanded
-            ? `${classes.Layout__section} ${classes["Layout__section--moveUp"]}`
-            : classes.Layout__section
+            ? `${classes.Layout__row} ${classes["Layout__row--moveUp"]}`
+            : classes.Layout__row
         }
       >
-        {children[0]}
+        <div className={classes.Layout__column}>{children[0]}</div>
       </div>
-      <div className={classes.Layout__section}>{children[1]}</div>
+      <div className={classes.Layout__row}>
+        <div className={classes.Layout__column}>{children[1]}</div>
+        <div className={classes.Layout__column}>
+          <div className={classes.Layout__buttonWrapper}>{children[2]}</div>
+        </div>
+      </div>
       <div
         className={
           expanded
-            ? `${classes.Layout__section}`
-            : `${classes.Layout__section}  ${classes["Layout__section--moveDown"]}`
+            ? `${classes.Layout__row}`
+            : `${classes.Layout__row}  ${classes["Layout__row--moveDown"]}`
         }
       >
-        {children[2]}
+        {children[3]}
       </div>
     </div>
   );

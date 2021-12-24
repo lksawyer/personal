@@ -12,16 +12,51 @@
   justify-content: flex-end;
 }
 
-.Layout__section {
+.Layout__row {
   position: static;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.Layout__section--moveUp {
+.Layout__row--moveUp {
   position: absolute;
   top: 100%;
 }
 
-.Layout__section--moveDown {
+.Layout__row--moveDown {
   position: absolute;
   bottom: 100%;
+}
+
+.Layout__column {
+  width: 100%;
+}
+
+.Layout__buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Breakpoints */
+
+/* Mobile devices, less than 768px */
+/* No media query for mobile since this is the default */
+
+/* Tablets, 768px and up */
+@media (min-width: 768px) {
+}
+
+/* Desktop, 1440px and up  */
+@media (min-width: 1440px) {
+  .Layout__column {
+    width: 50%;
+  }
+
+  .Layout__buttonWrapper {
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
 }

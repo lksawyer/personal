@@ -2,7 +2,8 @@
 /* No media query for mobile since this is the default */
 .Expanded {
   background-color: rgba(255, 255, 255, 0.85);
-  padding: 24px;
+  padding: 26px;
+  width: 100%;
 }
 
 .Expanded--nighttime {
@@ -50,6 +51,10 @@
 
 /* Tablets, 768px and up */
 @media (min-width: 768px) {
+  .Expanded {
+    padding: 64px;
+  }
+
   .Expanded__list {
     display: flex;
     flex-wrap: wrap;
@@ -82,7 +87,7 @@
 /* Desktop, 1440px and up  */
 @media (min-width: 1440px) {
   .Expanded {
-    padding: 64px;
+    padding: 64px 128px;
   }
 
   .Expanded__item {
