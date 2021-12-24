@@ -3,11 +3,11 @@ import Greeting from "./Greeting";
 import Time from "./Time";
 import Location from "./Location";
 
-const Clock = () => {
+const Clock = props => {
   return (
     <div className={classes.Clock}>
       <Greeting />
-      <Time />
+      <Time time={props.time} />
       <Location />
     </div>
   );

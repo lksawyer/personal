@@ -17,7 +17,7 @@ const Quote = () => {
       .get("https://programming-quotes-api.herokuapp.com/Quotes/random")
       .then(function(response) {
         // handle success
-        console.log("response: ", response);
+        console.log("quote response: ", response);
         setQuote({
           author: response.data.author,
           en: response.data.en,
@@ -26,7 +26,7 @@ const Quote = () => {
       })
       .catch(function(error) {
         // handle error
-        console.log("error: ", error);
+        console.log("quote error: ", error);
       });
   };
 
