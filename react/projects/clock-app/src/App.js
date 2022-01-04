@@ -5,7 +5,9 @@ import Expanded from "./components/Expanded/Expanded";
 import Layout from "./components/Layout/Layout";
 import Button from "./components/Button/Button";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import doAxios from "./api/utilities/doAxios";
+import resultsHandler from "./api/utilities/resultsHandler";
 
 function App() {
   // State
@@ -19,28 +21,31 @@ function App() {
     week_number: null
   });
 
+  const [makeCall, setMakeCall] = useState(true);
+
   // worldtimeapi API
-  useEffect(() => {
-    axios
-      .get("http://worldtimeapi.org/api/ip")
-      .then(function(response) {
-        // handle success
-        console.log("worldtimeapi response: ", response);
-        setTime({
-          abbreviation: response.data.abbreviation,
-          datetime: response.data.datetime,
-          day_of_week: response.data.day_of_week,
-          day_of_year: response.data.day_of_year,
-          timezone: response.data.timezone,
-          unixtime: response.data.unixtime,
-          week_number: response.dataweek_number
-        });
-      })
-      .catch(function(error) {
-        // handle error
-        console.log("worldtimeapi error: ", error);
+  const results = useCallback(results => {
+    console.log("Inside App - results: ", results);
+    if (resultsHandler) {
+      setTime({
+        abbreviation: results.data.abbreviation,
+        datetime: results.data.datetime,
+        day_of_week: results.data.day_of_week,
+        day_of_year: results.data.day_of_year,
+        timezone: results.data.timezone,
+        unixtime: results.data.unixtime,
+        week_number: results.dataweek_number
       });
-  }, []);
+    }
+  });
+
+  useEffect(() => {
+    console.log("Inside App - useEffect");
+    if (makeCall) {
+      doAxios("http://worldtimeapi.org/api/ip", undefined, results);
+      setMakeCall(false);
+    }
+  }, [makeCall]);
 
   return (
     <>
