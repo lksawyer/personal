@@ -2,6 +2,7 @@ import classes from "./Location.module.css";
 import { useCallback, useEffect, useState } from "react";
 import doAxios from "../../api/utilities/doAxios";
 import resultsHandler from "../../api/utilities/resultsHandler";
+import locationResultParser from "../../api/utilities/parsing/locationResultParser";
 
 const Location = () => {
   // State
@@ -36,10 +37,7 @@ const Location = () => {
   const results = useCallback(results => {
     console.log("Inside Location - results: ", results);
     if (resultsHandler) {
-      setLocation({
-        city: results.data.city,
-        region_code: results.data.region_code
-      });
+      setLocation(locationResultParser(results));
     }
   });
 

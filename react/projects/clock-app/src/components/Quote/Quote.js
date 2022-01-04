@@ -3,6 +3,7 @@ import IconRresh from "../SVG/IconRefresh";
 import { useCallback, useEffect, useState } from "react";
 import doAxios from "../../api/utilities/doAxios";
 import resultsHandler from "../../api/utilities/resultsHandler";
+import quoteResultParser from "../../api/utilities/parsing/quoteResultParser";
 
 const Quote = () => {
   // State
@@ -37,11 +38,7 @@ const Quote = () => {
   const results = useCallback(results => {
     console.log("Inside Quote - results: ", results);
     if (resultsHandler) {
-      setQuote({
-        author: results.data.author,
-        en: results.data.en,
-        id: results.data.id
-      });
+      setQuote(quoteResultParser(results));
     }
   });
 
